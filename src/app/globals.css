@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.card-shadow{
+    box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.08);
+}
+
+@screen md {
+    .responsive-image {
+        max-width: 30%;
+    }
+}
+
+@screen lg {
+    .responsive-image {
+        max-width: 50%;
+    }
+}
+@screen xl {
+    .responsive-image {
+        max-width: 100%;
+    }
+}
+
+

@@ -13,22 +13,22 @@ const EconomicTrendsAnalyzerScheme = () => {
           <EconomicTrendsBox text='Less supply' textColor='blue1000' />
         </div>
         <div className='flex gap-5 items-center'>
-          <EconomicTrendsBox text='Businesses increase prices' textColor='blue1000' />
+          <EconomicTrendsBox text='People with more money' textColor='blue1000' />
           <NextArrow />
-          <EconomicTrendsBox text='Inflation' textColor='blue1000' />
+          <EconomicTrendsBox text='More demand' textColor='blue1000' />
         </div>
       </div>
       <BetweenArrow />
       <div className='flex flex-col gap-12'>
         <div className='flex gap-5 items-center'>
-          <EconomicTrendsBox text='Labour shortages' textColor='blue1000' />
+          <EconomicTrendsBox text='Businesses increase prices' textColor='blue1000' />
           <NextArrow />
-          <EconomicTrendsBox text='Less supply' textColor='blue1000' />
+          <EconomicTrendsBox text='Inflation' textColor='blue1000' />
         </div>
         <div className='flex gap-5 items-center'>
-          <EconomicTrendsBox text='Businesses increase prices' textColor='blue1000' classes='bg-[#75DFF0]' />
+          <EconomicTrendsBox text='Less consumer spending' textColor='blue1000' classes='bg-[#75DFF0]' />
           <NextArrow classes='rotate-180' />
-          <EconomicTrendsBox text='Inflation' textColor='blue1000' />
+          <EconomicTrendsBox text='Higher interest rates' textColor='blue1000' />
         </div>
       </div>
       <LastSchemeArrow />
@@ -37,3 +37,4 @@ const EconomicTrendsAnalyzerScheme = () => {
 };
 
 export default EconomicTrendsAnalyzerScheme;
+

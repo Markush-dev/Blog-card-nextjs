@@ -9,7 +9,10 @@ const VERTICAL_THRESHOLD = 781;
 
 const BlogCard: React.FC<BlogCardProps> = ({ data, configuration }) => {
   const [windowWidth, setWindowWidth] = useState<number>(1280);
-  const { cardType, bgColor, hasBtn, changeImagePosition, categoriesStyle } = configuration;
+  const {
+    cardType, bgColor, hasBtn,
+    changeImagePosition, categoriesStyle, margin,
+  } = configuration;
   const { imageUrl, date, categories, title, content } = data;
 
   useEffect(() => {
@@ -44,8 +47,8 @@ const BlogCard: React.FC<BlogCardProps> = ({ data, configuration }) => {
 
   return (
     <article
-      className={`flex ${changeImagePosition && 'justify-between'} ${styles.customBlockStyles || ''} `}
-      style={{ backgroundColor: `var(--${bgColor})` }}
+      className={`flex ${changeImagePosition ? 'justify-between' : ''} ${styles.customBlockStyles || ''} `}
+      style={{ backgroundColor: bgColor ? `var(--${bgColor})` : ''}}
     >
       {!changeImagePosition && (
         <Image
@@ -58,7 +61,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ data, configuration }) => {
         />
       )}
       <div
-        className={`flex flex-col ${styles.contentStyles || ''}`}
+        className={`flex flex-col ${styles.contentStyles || ''} ${margin || ''}`}
       >
         <header className='text-xs'>
           <time className='mr-4' dateTime={date}>

@@ -6,6 +6,7 @@ export interface IConfig {
   hasBtn?: boolean;
   bgColor?: string;
   categoriesStyle?: string;
+  margin?: string;
 }
 
 export const CARD_DEFAULT_STYLE_CONFIG: { [key: number]: IConfig } = {
@@ -41,4 +42,10 @@ export const BLOG_CARD_BLACK_CONFIG: IConfig = {
   cardType: 'horizontal',
   bgColor: 'black',
   categoriesStyle: 'light',
+};
+
+export const CARD_REVIEW_CONFIG: IConfig = {
+  cardType: 'horizontal',
+  bgColor: 'blue1000',
+  margin:'ml-10'
 };

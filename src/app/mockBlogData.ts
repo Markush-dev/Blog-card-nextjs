@@ -51,3 +51,9 @@ export const dataPartnerHub = {
   title: 'Rathdowne Village',
   content: 'Boasting one of the lowest vacancy rates in Melbourne, the business community of Rathdowne Street in Carlton North is thriving. Comprising a diverse mix of hospitality, retail and services; a lush nature strip; a park; a local school; a bike path and a bus service.',
 };
+
+export const dataReview = {
+  imageUrl: '/review.png',
+  title: '“We’ve noticed an increase in the average transaction value, but our number of customers per week has dropped by about 10%... So, either the basket size has stayed the same and the customer has taken a lesser amount, or they\'ve increased the basket size. But they haven\'t gone away.”',
+  content: 'Malcolm McCullough, Bill’s Farm, Victoria',
+};

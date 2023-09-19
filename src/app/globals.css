@@ -2,26 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+ --blue1000: #0071ce;
+ --grey30: #f6f7f9;
+ --lightBlue: #6ac2e8;
+ --yellow1000: #f4be49;
+ --paleGreen: #ecf3da;
+ --blue400: #7baed4;
+ --black: #212322;
+}
 
-.card-shadow{
-    box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.08);
+.card-shadow {
+ box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.08);
 }
 
 @screen md {
-    .responsive-image {
-        max-width: 30%;
-    }
+ .responsive-image {
+  max-width: 30%;
+ }
 }
 
 @screen lg {
-    .responsive-image {
-        max-width: 50%;
-    }
+ .responsive-image {
+  max-width: 50%;
+ }
 }
 @screen xl {
-    .responsive-image {
-        max-width: 100%;
-    }
+ .responsive-image {
+  max-width: 100%;
+ }
 }
 
 

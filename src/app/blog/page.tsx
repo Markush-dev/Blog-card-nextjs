@@ -4,6 +4,7 @@ import BusinessResilienceReport from '@/components/BusinessResilienceReport';
 import Image from 'next/image';
 import DropDownMenu from '@/components/DropDownMenu';
 import CustomTitle from '../../components/CustomTitle';
+import EconomicTrendsAnalyzerScheme from '@/components/EconomicTrendsAnalyzerScheme';
 
 const options = [
   'What are business owners most concerned about?',
@@ -67,15 +68,19 @@ const BlogPage = () => {
             staff. Before we explore how to mitigate the effects of these for small businesses, it’s important to
             understand
             the interplay between all three.</p>
-          <CustomTitle
-            text='Connecting the dots: inflation, interest rates and labour shortages'
-            color='blue1000'
-            classes='mt-6 max-w-[700px]'
-          />
+
         </div>
-
-
       </div>
+      <div className='w-full hidden md:flex flex-col justify-center items-center'>
+        <CustomTitle
+          text='Connecting the dots: inflation, interest rates and labour shortages'
+          color='blue1000'
+          classes='mt-6 max-w-[700px]'
+        />
+        <EconomicTrendsAnalyzerScheme />
+      </div>
+
+
     </main>
 
   );

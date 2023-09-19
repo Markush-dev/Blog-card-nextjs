@@ -6,7 +6,7 @@ interface IProps {
   classes?: string
 }
 
-const ReportsTitle: FC<IProps> = ({ text, color, classes }) => {
+const CustomTitle: FC<IProps> = ({ text, color, classes }) => {
   return (
     <h3
       style={{ color: `var(--${color || ''})` }}
@@ -17,4 +17,4 @@ const ReportsTitle: FC<IProps> = ({ text, color, classes }) => {
   );
 };
 
-export default ReportsTitle;
+export default CustomTitle;

@@ -20,10 +20,9 @@ const Dropdown: React.FC<DropdownProps> = ({ options }) => {
   };
 
   return (
-    <div className='px-4 py-8 md:p-0'>
-      <div className={`relative inline-block ${isOpen ? 'card-shadow' : ''} rounded-2xl h-auto`}>
+      <div className={`relative inline-block ${isOpen ? 'card-shadow' : ''} rounded-2xl h-auto w-full`}>
         <div
-          className={`flex items-center justify-between w-[272px] px-4 py-1 rounded-2xl bg-white ${!isOpen && 'card-shadow'}  cursor-pointer`}
+          className={`flex items-center justify-between md:w-[272px] px-4 py-1 rounded-2xl bg-white ${!isOpen && 'card-shadow'}  cursor-pointer`}
           onClick={toggleDropdown}
         >
           <span className=' font-semibold h-10 flex justify-center items-center'>{selectedOption}</span>
@@ -43,8 +42,6 @@ const Dropdown: React.FC<DropdownProps> = ({ options }) => {
           </ul>
         )}
       </div>
-    </div>
-
   );
 };
 

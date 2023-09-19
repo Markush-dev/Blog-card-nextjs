@@ -1,10 +1,9 @@
 import React from 'react';
 import BlogCardHeader from '@/components/Blog/BlogCardHeader';
 import BlogCard from '@/components/Blog/BlogCard';
-import { dataCard, dataColorCard, dataPartnerHub, dataSubscribe } from '@/app/mockBlogData';
+import { dataCard, dataSubscribe } from '@/app/mockBlogData';
 import {
   CARD_DEFAULT_STYLE_CONFIG,
-  CARD_STYLE_COLOR_CONFIG,
   CARD_SUBSCRIBE_CONFIG,
 } from '@/app/config';
 import BlogCardList from '@/components/Blog/BlogCardList';

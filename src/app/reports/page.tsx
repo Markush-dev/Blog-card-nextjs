@@ -15,7 +15,9 @@ import { CARD_HELP_BUSINESS_CONFIG, CARD_REVIEW_CONFIG } from '@/app/config';
 import ColorInfoBlock from '@/components/ColorInfoBlock';
 import DoughnutBlogChart from '@/components/DoughnutBlogChart';
 import { mockDataChart, mockDataHorizontalChart } from '@/app/mockDataChart';
-import { images, options } from '@/app/mockDataReportPage';
+import { breadcrumbItems, images, options } from '@/app/mockDataReportPage';
+import Breadcrumb from '@/components/Breadcrumb';
+
 
 const BlogPage = () => {
   return (
@@ -30,10 +32,11 @@ const BlogPage = () => {
           priority={true}
         />
         <BusinessResilienceReport />
+        <Breadcrumb items={breadcrumbItems}/>
         <div className='flex flex-col justify-center items-center pl-8 pr-6 mt-4 gap-x-16 md:items-start md:pr-0 md:flex-row'>
           <ThematicBlock
             title='As a small business owner in 2023, you wouldn’t be mistaken for thinking the economic outlook was bleak, but adversity breeds opportunity.'
-            classes='max-w-full'
+            classes='max-w-full px-0'
             titleClasses='md:text-[32px] mt-0'
             element={<p className='text-lg mt-6 mb-8'>From supply chain disruptions and skills shortages fuelled by the
               COVID19
@@ -139,7 +142,8 @@ const BlogPage = () => {
         <ColorInfoBlock
           classes='pt-16 pb-12 max-w-[842px]'
           title='Finding opportunities in crisis'
-          element={<p className='mt-4'>While the hurdles brought about by inflation, rising interest rates and labour shortages will
+          element={<p className='mt-4'>While the hurdles brought about by inflation, rising interest rates and labour
+            shortages will
             continue to test a lot of small businesses this year, they will also serve as the impetus to reevaluate your
             business operations for the better. Whether it’s finding new suppliers, promoting staff members or
             overhauling your financial system to better monitor your sales and expenses, 2023 can still be a pivotal

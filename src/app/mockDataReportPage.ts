@@ -13,3 +13,8 @@ export const images = [
   '/shopping.png',
   '/shopping.png',
 ];
+
+export const breadcrumbItems = [
+  { label: 'Zeller Business Blog', url: '/posts' },
+  { label: 'Reports', url: '/reports' },
+];

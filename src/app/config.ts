@@ -4,6 +4,7 @@ export interface IConfig {
   cardType: Card;
   changeImagePosition?: boolean;
   hasBtn?: boolean;
+  btnName?: string;
   bgColor?: string;
   categoriesStyle?: string;
   margin?: string;
@@ -25,6 +26,7 @@ export const CARD_SUBSCRIBE_CONFIG: IConfig = {
   cardType: 'horizontal',
   changeImagePosition: true,
   hasBtn: true,
+  btnName: 'Subscribe',
   bgColor: 'blue1000',
 };
 
@@ -47,5 +49,13 @@ export const BLOG_CARD_BLACK_CONFIG: IConfig = {
 export const CARD_REVIEW_CONFIG: IConfig = {
   cardType: 'horizontal',
   bgColor: 'blue1000',
-  margin:'ml-10'
+  margin: 'ml-10',
+};
+
+export const CARD_HELP_BUSINESS_CONFIG: IConfig = {
+  cardType: 'horizontal',
+  changeImagePosition: true,
+  hasBtn: true,
+  btnName: 'Leave your details',
+  bgColor: 'blue1000',
 };

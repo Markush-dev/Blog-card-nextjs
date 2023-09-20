@@ -57,3 +57,10 @@ export const dataReview = {
   title: '“We’ve noticed an increase in the average transaction value, but our number of customers per week has dropped by about 10%... So, either the basket size has stayed the same and the customer has taken a lesser amount, or they\'ve increased the basket size. But they haven\'t gone away.”',
   content: 'Malcolm McCullough, Bill’s Farm, Victoria',
 };
+
+export const dataHelpBusiness =
+  {
+    imageUrl: '/subscribe.png',
+    title: 'Let us help your business grow.',
+    content: 'Zeller Sales is here to help you succeed. Leave your contact details and we’ll be in touch soon.',
+  };

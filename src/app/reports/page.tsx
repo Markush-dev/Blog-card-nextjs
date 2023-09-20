@@ -10,8 +10,9 @@ import ImageGridGallery from '@/components/ImageGridGallery';
 import BusinessOwnersViews from '@/components/BusinessOwnersViews';
 import ThematicBlock from '@/components/ThematicBlock';
 import BlogCard from '@/components/Blog/BlogCard';
-import { dataReview } from '@/app/mockBlogData';
-import { CARD_REVIEW_CONFIG } from '@/app/config';
+import { dataHelpBusiness, dataReview, dataSubscribe } from '@/app/mockBlogData';
+import { CARD_HELP_BUSINESS_CONFIG, CARD_REVIEW_CONFIG, CARD_SUBSCRIBE_CONFIG } from '@/app/config';
+import ColorInfoBlock from '@/components/ColorInfoBlock';
 
 const options = [
   'What are business owners most concerned about?',
@@ -29,6 +30,9 @@ const images = [
   '/shopping.png',
 ];
 
+const mockText = 'While the hurdles brought about by inflation, rising interest rates and labour shortages will continue to test a lot of small businesses this year, they will also serve as the impetus to reevaluate your business operations for the better. Whether it’s finding new suppliers, promoting staff members or overhauling your financial system to better monitor your sales and expenses, 2023 can still be a pivotal year for business growth. \n At Zeller, we understand the challenges facing small business, which is why we’ve worked hard to create a solution. From EFTPOS to invoicing, debit cards and reporting, our financial ecosystem has been built to help businesses take payments, make payments, and manage their money — better than a bank. The world is changing, and so should the way you do business. ';
+
+
 const BlogPage = () => {
   return (
     <main className='flex flex-col min-h-screen max-w-[1440px] mx-auto items-center'>
@@ -45,7 +49,7 @@ const BlogPage = () => {
         <div className='flex flex-col justify-center items-center pl-8 pr-6 mt-4 gap-x-16 md:items-start md:pr-0 md:flex-row'>
           <div>
             <CustomTitle
-              text='As a small business owner in 2023, you wouldn’t be mistaken for thinking the economic outlook was bleak, but adversity breeds opportunity.'
+              title='As a small business owner in 2023, you wouldn’t be mistaken for thinking the economic outlook was bleak, but adversity breeds opportunity.'
               color='blue1000'
             />
             <p className='text-lg mt-6 mb-8'>From supply chain disruptions and skills shortages fuelled by the COVID19
@@ -72,7 +76,7 @@ const BlogPage = () => {
         </div>
         <div className='w-full hidden md:flex flex-col items-center'>
           <CustomTitle
-            text='What are business owners most concerned about?'
+            title='What are business owners most concerned about?'
             color='blue1000'
             classes='mt-6 md:text-[40px] text-4xl max-w-2xl'
           />
@@ -87,9 +91,9 @@ const BlogPage = () => {
       </div>
       <div className='w-full hidden md:flex flex-col justify-center items-center'>
         <CustomTitle
-          text='Connecting the dots: inflation, interest rates and labour shortages'
+          title='Connecting the dots: inflation, interest rates and labour shortages'
           color='blue1000'
-          classes='mt-6 max-w-[700px]'
+          classes='mt-6 max-w-[700px] md:text-[32px]'
         />
         <EconomicTrendsAnalyzerScheme />
         <EconomicInflationInfo />
@@ -113,19 +117,54 @@ const BlogPage = () => {
             sagittis nulla ipsum sit ac nunc.</p>
         </div>
       </div>
-      <div className='max-w-[842px] px-8 md:p-0'>
-        <ThematicBlock />
+      <div className='max-w-[842px]'>
+        <ThematicBlock title='Why is inflation so high?'/>
         <ImageGridGallery imagePaths={images} />
       </div>
       <BusinessOwnersViews />
-      <ThematicBlock />
+      <ThematicBlock title='Why is inflation so high?'/>
+      <ThematicBlock title='Why is inflation so high?'/>
       <div className='text-white mt-12 md:px-20'>
         <BlogCard
           data={dataReview}
           configuration={CARD_REVIEW_CONFIG}
         />
       </div>
-      <ThematicBlock />
+      <ThematicBlock title='Why is inflation so high?'/>
+      <div className='mt-12 md:px-20'>
+        <ColorInfoBlock
+          classes='py-[72px] px-8'
+          title='“If you reinvest in the community, it’s much better for staff, the business and the quality of your product.”'
+          text='Malcolm McCullough, Bill’s Farm, Victoria'
+          textClasses='text-sm text-[#0071CE] mt-5'
+        />
+      </div>
+      <ThematicBlock title='Why is inflation so high?'/>
+      <div className='flex gap-2 mt-12 max-w-[842px]'>
+        <ColorInfoBlock
+          classes='py-5 px-6'
+          title='Percentage of respondents looking to cut costs in their business.'
+          titleClasses='md:text-2xl'
+        />
+        <ColorInfoBlock
+          classes='px-6 md:w-1/3'
+          title='85%'
+          titleClasses='md:text-[120px] md:leading-[136px] md:font-normal'
+        />
+      </div>
+      <ThematicBlock title='Why is inflation so high?'/>
+      <div className='flex justify-center mt-12 w-full bg-[#E3F9FC]'>
+        <ColorInfoBlock
+          classes='pt-16 pb-12 max-w-[842px]'
+          title='Finding opportunities in crisis'
+          text={mockText}
+          textClasses='mt-4'
+        />
+      </div>
+      <ThematicBlock title='Why is inflation so high?'/>
+      <div className='mt-16 mb-8 sm:px-20 text-white'>
+        <BlogCard data={dataHelpBusiness} configuration={CARD_HELP_BUSINESS_CONFIG} />
+      </div>
     </main>
   );
 };

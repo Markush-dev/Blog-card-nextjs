@@ -1,18 +1,18 @@
 import { FC } from 'react';
 
 interface IProps {
-  text: string,
+  title: string,
   color?: string
   classes?: string
 }
 
-const CustomTitle: FC<IProps> = ({ text, color, classes }) => {
+const CustomTitle: FC<IProps> = ({ title, color, classes }) => {
   return (
     <h3
       style={{ color: `var(--${color || ''})` }}
-      className={`text-2xl md:text-[32px] md:leading-10 font-semibold ${classes || ''}`}
+      className={`font-semibold text-2xl  ${classes || 'md:text-[32px] md:leading-10'}`}
     >
-      {text}
+      {title}
     </h3>
   );
 };

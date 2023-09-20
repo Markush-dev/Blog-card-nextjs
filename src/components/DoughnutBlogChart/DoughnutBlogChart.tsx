@@ -19,7 +19,7 @@ type ChartDataset = {
   label?: string;
   data: number[];
   backgroundColor: string[];
-  borderColor: string[];
+  borderColor: string[] | string;
   borderWidth: number;
 };
 

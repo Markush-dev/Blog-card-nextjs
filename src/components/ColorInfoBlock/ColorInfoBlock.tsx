@@ -1,20 +1,19 @@
 import CustomTitle from '@/components/CustomTitle';
-import React, { FC } from 'react';
+import React, { FC, ReactNode } from 'react';
 
 interface IProps {
   classes: string;
   title: string;
   titleClasses?: string;
+  element?: ReactNode;
   text?: string;
   textClasses?: string;
 }
 
-
 const ColorInfoBlock: FC<IProps> = ({
   classes, title,
-  titleClasses, text, textClasses,
+  titleClasses, text, element, textClasses,
 }) => {
-  const formattedText = text?.replace(/\n/g, '<br /><br />');
 
   return (
     <div className={`w-full bg-[#E3F9FC] rounded-2xl ${classes}`}>
@@ -23,9 +22,8 @@ const ColorInfoBlock: FC<IProps> = ({
         color='blue1000'
         classes={titleClasses}
       />
-      {formattedText && (
-        <p className={textClasses || ''} dangerouslySetInnerHTML={{ __html: formattedText }} />
-      )}
+      {text && <p className={textClasses || ''}>{text}</p>}
+      {element && <>{element}</>}
     </div>
   );
 };

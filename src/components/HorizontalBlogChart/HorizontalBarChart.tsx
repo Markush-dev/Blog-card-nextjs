@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { FC } from 'react';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -20,27 +20,20 @@ ChartJS.register(
   // Tooltip,
   Legend,
 );
+interface IProps {
+  data: ChartData;
+}
 
-const data = {
-  labels: [
-    'Increasing cost of supplies and materials',
-    'Customer spending less',
-    'Hiring skilled employees and retaining good staff',
-    'Business finances',
-    'Keeping up with technology',
-    'Keeping up with regulations and reporting',
-    'Cybersecurity',
-    'Employees expecting higher wages',
-    'Customer choosing to buy sustainably',
-  ],
-  datasets: [
-    {
-      label: '',
-      backgroundColor: '#0071ce',
-      borderWidth: 1,
-      data: [41.5, 32, 7.6, 6.3, 3.5, 3, 2.6, 1.8, 1.6],
-    },
-  ],
+type ChartData = {
+  labels: string[];
+  datasets: ChartDataset[];
+};
+
+type ChartDataset = {
+  label?: string;
+  data: number[];
+  backgroundColor: string[] | string;
+  borderWidth: number;
 };
 
 const options = {
@@ -91,7 +84,7 @@ const options = {
   },
 };
 
-const HorizontalBarChart = () => {
+const HorizontalBarChart:FC<IProps> = ({data}) => {
   return (
     <div className='hidden md:flex flex-col w-[85%] self-start'>
       <Bar data={data} options={options} plugins={[ChartDataLabels]} />

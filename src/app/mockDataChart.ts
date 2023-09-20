@@ -1,4 +1,4 @@
-export const mockDataChartDoughnut = [
+export const mockDataChart = [
   {
     labels: ['10-20%', '20-50%', 'More then 50%', 'Not at all', 'Under 10%'],
     datasets: [
@@ -32,9 +32,31 @@ export const mockDataChartDoughnut = [
           'rgb(246, 249, 253)',
           'rgb(10 217 236)',
         ],
-        borderColor: ['white'],
+        borderColor: 'white',
         borderWidth: 2,
       },
     ],
   }
-] ;
+];
+
+export const mockDataHorizontalChart = {
+  labels: [
+    'Increasing cost of supplies and materials',
+    'Customer spending less',
+    'Hiring skilled employees and retaining good staff',
+    'Business finances',
+    'Keeping up with technology',
+    'Keeping up with regulations and reporting',
+    'Cybersecurity',
+    'Employees expecting higher wages',
+    'Customer choosing to buy sustainably',
+  ],
+  datasets: [
+    {
+      label: '',
+      data: [41.5, 32, 7.6, 6.3, 3.5, 3, 2.6, 1.8, 1.6],
+      backgroundColor: 'rgb(14 100 196)',
+      borderWidth: 1,
+    },
+  ],
+};

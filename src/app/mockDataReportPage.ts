@@ -1,9 +1,9 @@
 export const options = [
-  'What are business owners most concerned about?',
-  'Supply Costs',
-  'Consumer Spending',
-  'Hiring',
-  'Finding opportunities in crisis',
+  { label: 'What are business owners most concerned about?', anchor: 'businessOwners' },
+  { label: 'Supply Costs', anchor: '' },
+  { label: 'Consumer Spending', anchor: '' },
+  { label: 'Hiring', anchor: '' },
+  { label: 'Finding opportunities in crisis', anchor: 'opportunities' },
 ];
 export const images = [
   '/shopping.png',

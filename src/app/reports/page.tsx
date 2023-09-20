@@ -56,7 +56,7 @@ const BlogPage = () => {
           />
           <DropDownMenu options={options} />
         </div>
-        <div className='w-full hidden md:flex flex-col items-center'>
+        <div id='businessOwners' className='w-full hidden md:flex flex-col items-center'>
           <CustomTitle
             title='What are business owners most concerned about?'
             color='blue1000'
@@ -138,7 +138,7 @@ const BlogPage = () => {
         />
       </div>
       <ThematicBlock title='Why is inflation so high?' />
-      <div className='flex justify-center mt-12 w-full bg-[#E3F9FC]'>
+      <div id='opportunities' className='flex justify-center mt-12 w-full bg-[#E3F9FC]'>
         <ColorInfoBlock
           classes='pt-16 pb-12 max-w-[842px]'
           title='Finding opportunities in crisis'

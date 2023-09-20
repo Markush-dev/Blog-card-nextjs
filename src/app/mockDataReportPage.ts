@@ -18,3 +18,8 @@ export const breadcrumbItems = [
   { label: 'Zeller Business Blog', url: '/posts' },
   { label: 'Reports', url: '/reports' },
 ];
+
+export const breadcrumbItemsPostPage = [
+  { label: 'Zeller Business Blog', url: '/posts' },
+  { label: 'Posts', url: '/post' },
+];

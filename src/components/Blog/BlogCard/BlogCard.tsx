@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { BlogCardProps } from '@/components/Blog/BlogCard/types';
 import { styleObject } from '@/components/Blog/BlogCard/styles';
 import CustomBtn from '@/components/CustomBtn';
+import { useRouter } from 'next/navigation';
 
 const VERTICAL_THRESHOLD = 781;
 
@@ -12,9 +13,11 @@ const BlogCard: React.FC<BlogCardProps> = ({ data, configuration }) => {
   const {
     cardType, bgColor, hasBtn, btnName,
     changeImagePosition, categoriesStyle, margin,
-  } = configuration;
-  const { imageUrl, date, categories, title, content } = data;
+    postWidth, fontSizeTitle,
 
+  } = configuration;
+  const { imageUrl, date, categories, title, content, id } = data;
+  const router = useRouter();
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
@@ -40,19 +43,28 @@ const BlogCard: React.FC<BlogCardProps> = ({ data, configuration }) => {
   }, [cardType, isVertical, changeImagePosition, styles]);
 
   const categoryClassName = useMemo(() => {
-    if (!categoriesStyle) return 'bg-blue-100 text-black';
+    if (bgColor === 'grey30') return 'bg-white text-[#0071CE]';
+    if (!categoriesStyle) return ' bg-[#F6F7F9] text-[#0071CE]';
     if (categoriesStyle === 'light') return 'bg-white text-black';
     if (categoriesStyle === 'color') return 'bg-black text-white';
-  }, [categoriesStyle]);
+  }, [categoriesStyle, bgColor]);
+
+  const handleRedirectToPost = (id?: number) => {
+    if (!id) return;
+    router.push(`/posts/${id}`);
+  };
 
   return (
     <article
-      className={`flex ${changeImagePosition ? 'justify-between' : ''} ${styles.customBlockStyles || ''} `}
+      className={`flex cursor-pointer ${changeImagePosition
+        ? 'justify-between'
+        : ''} ${styles.customBlockStyles || ''} `}
       style={{ backgroundColor: bgColor ? `var(--${bgColor})` : '' }}
+      onClick={() => handleRedirectToPost(id)}
     >
       {!changeImagePosition && (
         <Image
-          className={imageClassName}
+          className={`${imageClassName} ${postWidth || ''}`}
           src={imageUrl}
           alt={title}
           width={624}
@@ -61,7 +73,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ data, configuration }) => {
         />
       )}
       <div
-        className={`flex flex-col ${styles.contentStyles || ''} ${margin || ''}`}
+        className={`flex flex-col ${styles.contentStyles || ''} ${margin || ''} ${postWidth || ''}`}
       >
         <header className='text-xs'>
           <time className='mr-4' dateTime={date}>
@@ -76,7 +88,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ data, configuration }) => {
             </span>
           ))}
         </header>
-        <h2 className='text-[22px] font-semibold'>{title}</h2>
+        <h2 className={`${fontSizeTitle || 'text-[22px]'} font-semibold`}>{title}</h2>
         <p>{content}</p>
         {hasBtn && btnName && <CustomBtn name={btnName} />}
       </div>

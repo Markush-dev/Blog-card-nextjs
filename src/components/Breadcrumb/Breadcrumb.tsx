@@ -1,8 +1,9 @@
 import React, { FC } from 'react';
+import Link from 'next/link';
 
 export interface BreadcrumbItem {
   label: string;
-  url?: string;
+  url: string;
 }
 
 export interface BreadcrumbProps {
@@ -19,7 +20,7 @@ const Breadcrumb: FC<BreadcrumbProps> = ({ items }) => {
               item.label
             ) : (
               <>
-                <a href={item.url}>{item.label}</a>
+                <Link href={item.url}>{item.label}</Link>
                 <span className='ml-2 text-gray-500 text-md'>/</span>
               </>
             )}

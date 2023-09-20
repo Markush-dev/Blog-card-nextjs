@@ -12,7 +12,7 @@ const Dropdown: React.FC<DropdownProps> = ({ options }) => {
   const dropdownRef = useRef<HTMLDivElement | null>(null);
 
   const toggleDropdown = () => {
-    setIsOpen(!isOpen);
+    setIsOpen(prevState => !prevState);
   };
 
   const selectOption = (option: string, anchor: string) => {

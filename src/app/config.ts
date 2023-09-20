@@ -8,6 +8,8 @@ export interface IConfig {
   bgColor?: string;
   categoriesStyle?: string;
   margin?: string;
+  fontSizeTitle?: string;
+  postWidth?: string;
 }
 
 export const CARD_DEFAULT_STYLE_CONFIG: { [key: number]: IConfig } = {
@@ -58,4 +60,10 @@ export const CARD_HELP_BUSINESS_CONFIG: IConfig = {
   hasBtn: true,
   btnName: 'Leave your details',
   bgColor: 'blue1000',
+};
+
+export const POST_DEFAULT_CONFIG: IConfig = {
+  cardType: 'horizontal',
+  postWidth: 'w-1/2',
+  fontSizeTitle: 'text-[40px]',
 };

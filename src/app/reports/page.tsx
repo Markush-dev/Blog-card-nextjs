@@ -13,6 +13,8 @@ import BlogCard from '@/components/Blog/BlogCard';
 import { dataHelpBusiness, dataReview, dataSubscribe } from '@/app/mockBlogData';
 import { CARD_HELP_BUSINESS_CONFIG, CARD_REVIEW_CONFIG, CARD_SUBSCRIBE_CONFIG } from '@/app/config';
 import ColorInfoBlock from '@/components/ColorInfoBlock';
+import DoughnutBlogChart from '@/components/DoughnutBlogChart';
+import { mockDataChartDoughnut } from '@/app/mockDataChartDoughnut';
 
 const options = [
   'What are business owners most concerned about?',
@@ -31,7 +33,6 @@ const images = [
 ];
 
 const mockText = 'While the hurdles brought about by inflation, rising interest rates and labour shortages will continue to test a lot of small businesses this year, they will also serve as the impetus to reevaluate your business operations for the better. Whether it’s finding new suppliers, promoting staff members or overhauling your financial system to better monitor your sales and expenses, 2023 can still be a pivotal year for business growth. \n At Zeller, we understand the challenges facing small business, which is why we’ve worked hard to create a solution. From EFTPOS to invoicing, debit cards and reporting, our financial ecosystem has been built to help businesses take payments, make payments, and manage their money — better than a bank. The world is changing, and so should the way you do business. ';
-
 
 const BlogPage = () => {
   return (
@@ -118,19 +119,23 @@ const BlogPage = () => {
         </div>
       </div>
       <div className='max-w-[842px]'>
-        <ThematicBlock title='Why is inflation so high?'/>
+        <ThematicBlock title='Why is inflation so high?' />
         <ImageGridGallery imagePaths={images} />
       </div>
       <BusinessOwnersViews />
-      <ThematicBlock title='Why is inflation so high?'/>
-      <ThematicBlock title='Why is inflation so high?'/>
+      <ThematicBlock title='Why is inflation so high?' />
+      <div className='max-w-[842px] flex gap-4 mt-12'>
+        <DoughnutBlogChart data={mockDataChartDoughnut[0]} title='Estimated Increase in Business Costs Since 2022' />
+        <DoughnutBlogChart data={mockDataChartDoughnut[1]} title='Business Costs That Have Increased Since 2022' />
+      </div>
+      <ThematicBlock title='Why is inflation so high?' />
       <div className='text-white mt-12 md:px-20'>
         <BlogCard
           data={dataReview}
           configuration={CARD_REVIEW_CONFIG}
         />
       </div>
-      <ThematicBlock title='Why is inflation so high?'/>
+      <ThematicBlock title='Why is inflation so high?' />
       <div className='mt-12 md:px-20'>
         <ColorInfoBlock
           classes='py-[72px] px-8'
@@ -139,7 +144,7 @@ const BlogPage = () => {
           textClasses='text-sm text-[#0071CE] mt-5'
         />
       </div>
-      <ThematicBlock title='Why is inflation so high?'/>
+      <ThematicBlock title='Why is inflation so high?' />
       <div className='flex gap-2 mt-12 max-w-[842px]'>
         <ColorInfoBlock
           classes='py-5 px-6'
@@ -152,7 +157,7 @@ const BlogPage = () => {
           titleClasses='md:text-[120px] md:leading-[136px] md:font-normal'
         />
       </div>
-      <ThematicBlock title='Why is inflation so high?'/>
+      <ThematicBlock title='Why is inflation so high?' />
       <div className='flex justify-center mt-12 w-full bg-[#E3F9FC]'>
         <ColorInfoBlock
           classes='pt-16 pb-12 max-w-[842px]'
@@ -161,7 +166,7 @@ const BlogPage = () => {
           textClasses='mt-4'
         />
       </div>
-      <ThematicBlock title='Why is inflation so high?'/>
+      <ThematicBlock title='Why is inflation so high?' />
       <div className='mt-16 mb-8 sm:px-20 text-white'>
         <BlogCard data={dataHelpBusiness} configuration={CARD_HELP_BUSINESS_CONFIG} />
       </div>

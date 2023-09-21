@@ -7,7 +7,7 @@ interface ImageGridProps {
 
 const ImageGridGallery: FC<ImageGridProps> = ({ imagePaths }) => {
   return (
-    <div className='grid grid-cols-3 gap-4 mt-12'>
+    <div className='grid grid-cols-3 gap-4'>
       {imagePaths.map((path, index) => (
         <div key={index}>
           <Image

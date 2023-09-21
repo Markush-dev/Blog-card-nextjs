@@ -15,7 +15,7 @@ import { CARD_HELP_BUSINESS_CONFIG, CARD_REVIEW_CONFIG } from '@/app/config';
 import ColorInfoBlock from '@/components/ColorInfoBlock';
 import DoughnutBlogChart from '@/components/DoughnutBlogChart';
 import { mockDataChart, mockDataHorizontalChart } from '@/app/mockDataChart';
-import { breadcrumbItems, images, options } from '@/app/mockDataReportPage';
+import { breadcrumbItems, imagesDesktop, options } from '@/app/mockDataReportPage';
 import Breadcrumb from '@/components/Breadcrumb';
 
 
@@ -100,7 +100,9 @@ const BlogPage = () => {
       </div>
       <div className='max-w-[842px]'>
         <ThematicBlock title='Why is inflation so high?' />
-        <ImageGridGallery imagePaths={images} />
+        <div className='mt-12'>
+          <ImageGridGallery imagePaths={imagesDesktop} />
+        </div>
       </div>
       <BusinessOwnersViews />
       <ThematicBlock title='Why is inflation so high?' />

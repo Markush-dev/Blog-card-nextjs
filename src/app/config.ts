@@ -64,6 +64,6 @@ export const CARD_HELP_BUSINESS_CONFIG: IConfig = {
 
 export const POST_DEFAULT_CONFIG: IConfig = {
   cardType: 'horizontal',
-  postWidth: 'w-1/2',
+  postWidth: 'lg:w-1/2',
   fontSizeTitle: 'text-[40px]',
 };

@@ -33,4 +33,7 @@
  }
 }
 
-
+.custom-post-style-text h2 {
+ line-height: 48px;
+ letter-spacing: -0.8px;
+}

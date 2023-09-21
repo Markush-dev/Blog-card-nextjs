@@ -1,4 +1,5 @@
 type Card = 'vertical' | 'horizontal'
+type CategoriesStyle = 'whiteCard' | 'grayCard' | 'colorCard' | 'blackCard'
 
 export interface IConfig {
   cardType: Card;
@@ -6,22 +7,22 @@ export interface IConfig {
   hasBtn?: boolean;
   btnName?: string;
   bgColor?: string;
-  categoriesStyle?: string;
+  categoriesStyle?: CategoriesStyle;
   margin?: string;
   fontSizeTitle?: string;
-  postWidth?: string;
+  configWidth?: string;
 }
 
 export const CARD_DEFAULT_STYLE_CONFIG: { [key: number]: IConfig } = {
-  0: { cardType: 'vertical', bgColor: 'grey30' },
-  1: { cardType: 'vertical', bgColor: 'grey30' },
-  2: { cardType: 'vertical', bgColor: 'grey30' },
+  0: { cardType: 'vertical', bgColor: 'grey30', categoriesStyle: 'grayCard' },
+  1: { cardType: 'vertical', bgColor: 'grey30', categoriesStyle: 'grayCard' },
+  2: { cardType: 'vertical', bgColor: 'grey30', categoriesStyle: 'grayCard' },
 };
 
 export const CARD_STYLE_COLOR_CONFIG: { [key: number]: IConfig } = {
-  0: { cardType: 'vertical', bgColor: 'yellow1000', categoriesStyle: 'color' },
-  1: { cardType: 'vertical', bgColor: 'paleGreen', categoriesStyle: 'color' },
-  2: { cardType: 'vertical', bgColor: 'blue400', categoriesStyle: 'color' },
+  0: { cardType: 'vertical', bgColor: 'yellow1000', categoriesStyle: 'colorCard' },
+  1: { cardType: 'vertical', bgColor: 'paleGreen', categoriesStyle: 'colorCard' },
+  2: { cardType: 'vertical', bgColor: 'blue400', categoriesStyle: 'colorCard' },
 };
 
 export const CARD_SUBSCRIBE_CONFIG: IConfig = {
@@ -35,23 +36,24 @@ export const CARD_SUBSCRIBE_CONFIG: IConfig = {
 export const BLOG_CARD_CONFIG: IConfig = {
   cardType: 'horizontal',
   bgColor: 'lightBlue',
-  categoriesStyle: 'color',
+  categoriesStyle: 'colorCard',
 };
 
 export const BLOG_CARD_DEFAULT_CONFIG: IConfig = {
   cardType: 'horizontal',
+  categoriesStyle: 'whiteCard',
 };
 
 export const BLOG_CARD_BLACK_CONFIG: IConfig = {
   cardType: 'horizontal',
   bgColor: 'black',
-  categoriesStyle: 'light',
+  categoriesStyle: 'blackCard',
 };
 
 export const CARD_REVIEW_CONFIG: IConfig = {
   cardType: 'horizontal',
   bgColor: 'blue1000',
-  margin: 'ml-10',
+  margin: 'md:ml-10',
 };
 
 export const CARD_HELP_BUSINESS_CONFIG: IConfig = {
@@ -64,6 +66,6 @@ export const CARD_HELP_BUSINESS_CONFIG: IConfig = {
 
 export const POST_DEFAULT_CONFIG: IConfig = {
   cardType: 'horizontal',
-  postWidth: 'lg:w-1/2',
+  configWidth: 'lg:w-1/2',
   fontSizeTitle: 'text-[40px]',
 };

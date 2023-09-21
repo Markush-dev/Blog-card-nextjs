@@ -15,13 +15,13 @@ import { CARD_HELP_BUSINESS_CONFIG, CARD_REVIEW_CONFIG } from '@/app/config';
 import ColorInfoBlock from '@/components/ColorInfoBlock';
 import DoughnutBlogChart from '@/components/DoughnutBlogChart';
 import { mockDataChart, mockDataHorizontalChart } from '@/app/mockDataChart';
-import { breadcrumbItems, imagesDesktop, options } from '@/app/mockDataReportPage';
+import { breadcrumbItems, imagesDesktop, imagesMobile, options } from '@/app/mockDataReportPage';
 import Breadcrumb from '@/components/Breadcrumb';
 
 
 const BlogPage = () => {
   return (
-    <main className='flex flex-col min-h-screen max-w-[1440px] mx-auto items-center'>
+    <main className='flex flex-col min-h-screen max-w-[1440px] mx-auto items-center overflow-hidden'>
       <div className='relative sm:px-20 flex flex-col items-center'>
         <Image
           className='object-cover relative rounded-2xl h-96 mt-80 z-10 md:h-full md:mt-0 md:z-0'
@@ -33,7 +33,7 @@ const BlogPage = () => {
         />
         <BusinessResilienceReport />
         <Breadcrumb items={breadcrumbItems}/>
-        <div className='flex flex-col justify-center items-center pl-8 pr-6 mt-4 gap-x-16 md:items-start md:pr-0 md:flex-row'>
+        <div className='flex flex-col justify-center items-center px-0 md:px-8 mt-4 gap-x-16 md:items-start md:pr-0 md:flex-row'>
           <ThematicBlock
             title='As a small business owner in 2023, you wouldn’t be mistaken for thinking the economic outlook was bleak, but adversity breeds opportunity.'
             classes='max-w-full px-0'
@@ -84,9 +84,11 @@ const BlogPage = () => {
           and services is 7% higher than this time last year. This doesn’t necessarily mean that everything has become
           7% more expensive, it simply reflects the average change in prices across a broad basket of goods and
           services.</p>
-        <div>
+      </div>
+      <div className='px-8 md:px-0'>
+        <div className='hidden sm:inline mt-12'>
           <Image
-            className='rounded-2xl mt-12'
+            className='rounded-2xl'
             src='/inflation.png'
             alt='inflation'
             width={842}
@@ -97,10 +99,27 @@ const BlogPage = () => {
             lorem dui dignissim vel condimentum molestie sagittis nulla ipsum sit ac nunc.
           </p>
         </div>
+        <div className='md:hidden mt-12'>
+          <Image
+            className='rounded-2xl'
+            src='/inflation2.png'
+            alt='inflation'
+            width={842}
+            height={543}
+            priority={true}
+          />
+          <p className='text-sm text-[#6D7274] max-w-md mt-6'>Purus morbi egestas odio egestas ac id leo egestas purus,
+            lorem dui dignissim vel condimentum molestie sagittis nulla ipsum sit ac nunc.
+          </p>
+        </div>
       </div>
+
       <div className='max-w-[842px]'>
         <ThematicBlock title='Why is inflation so high?' />
-        <div className='mt-12'>
+        <div className='-mx-[140px] mt-12 md:hidden'>
+          <ImageGridGallery imagePaths={imagesMobile} />
+        </div>
+        <div className='hidden mt-12 md:inline'>
           <ImageGridGallery imagePaths={imagesDesktop} />
         </div>
       </div>

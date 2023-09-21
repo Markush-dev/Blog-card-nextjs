@@ -2,7 +2,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import Image from 'next/image';
 import { BlogCardProps } from '@/components/Blog/BlogCard/types';
-import { styleObject } from '@/components/Blog/BlogCard/styles';
+import { categoryStylesClassName, styleObject } from '@/components/Blog/BlogCard/styles';
 import CustomBtn from '@/components/CustomBtn';
 import { useRouter } from 'next/navigation';
 
@@ -13,11 +13,12 @@ const BlogCard: React.FC<BlogCardProps> = ({ data, configuration }) => {
   const {
     cardType, bgColor, hasBtn, btnName,
     changeImagePosition, categoriesStyle, margin,
-    postWidth, fontSizeTitle,
+    configWidth, fontSizeTitle,
 
   } = configuration;
   const { imageUrl, date, categories, title, content, id } = data;
   const router = useRouter();
+
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
@@ -37,17 +38,33 @@ const BlogCard: React.FC<BlogCardProps> = ({ data, configuration }) => {
   }, [isVertical, cardType]);
 
   const imageClassName = useMemo(() => {
-    return `object-cover ${cardType === 'horizontal' && !isVertical ? 'responsive-image' : ''} ${
-      !changeImagePosition ? styles.imageStyles : 'rounded-b-2xl md:rounded-tr-2xl md:rounded-br-2xl'
-    }`;
-  }, [cardType, isVertical, changeImagePosition, styles]);
+    const baseClassName = 'object-cover';
+    const responsiveImageClassName = cardType === 'horizontal' && !isVertical ? 'responsive-image' : '';
+    const roundedImageClassName = !changeImagePosition
+      ? styles.imageStyles
+      : 'rounded-b-2xl md:rounded-tr-2xl md:rounded-br-2xl';
+    const imageWidth = configWidth || '';
+    return `${baseClassName} ${responsiveImageClassName} ${roundedImageClassName} ${imageWidth}`;
+  }, [cardType, isVertical, changeImagePosition, styles, configWidth]);
 
   const categoryClassName = useMemo(() => {
-    if (bgColor === 'grey30') return 'bg-white text-[#0071CE]';
-    if (!categoriesStyle) return ' bg-[#F6F7F9] text-[#0071CE]';
-    if (categoriesStyle === 'light') return 'bg-white text-black';
-    if (categoriesStyle === 'color') return 'bg-black text-white';
-  }, [categoriesStyle, bgColor]);
+    return `px-3 rounded-full mr-2 ${categoriesStyle ? categoryStylesClassName[categoriesStyle] : ''}`;
+  }, [categoriesStyle]);
+
+  const articleClassName = useMemo(() => {
+    const baseClassName = 'flex cursor-pointer';
+    const justifyBetweenClassName = changeImagePosition ? 'justify-between' : '';
+    const customBlockStylesClassName = styles.customBlockStyles || '';
+    return `${baseClassName} ${justifyBetweenClassName} ${customBlockStylesClassName}`;
+  }, [changeImagePosition, styles.customBlockStyles]);
+
+  const contentClassName = useMemo(() => {
+    const baseClassName = 'flex flex-col';
+    const customContentStylesClassName = styles.contentStyles || '';
+    const marginClassName = margin || '';
+    const contentWidthClassName = configWidth || '';
+    return `${baseClassName} ${customContentStylesClassName} ${marginClassName} ${contentWidthClassName}`;
+  }, [margin, configWidth, styles.contentStyles]);
 
   const handleRedirectToPost = (id?: number) => {
     if (!id) return;
@@ -56,15 +73,13 @@ const BlogCard: React.FC<BlogCardProps> = ({ data, configuration }) => {
 
   return (
     <article
-      className={`flex cursor-pointer ${changeImagePosition
-        ? 'justify-between'
-        : ''} ${styles.customBlockStyles || ''} `}
+      className={articleClassName}
       style={{ backgroundColor: bgColor ? `var(--${bgColor})` : '' }}
       onClick={() => handleRedirectToPost(id)}
     >
       {!changeImagePosition && (
         <Image
-          className={`${imageClassName} ${postWidth || ''}`}
+          className={imageClassName}
           src={imageUrl}
           alt={title}
           width={624}
@@ -73,16 +88,16 @@ const BlogCard: React.FC<BlogCardProps> = ({ data, configuration }) => {
         />
       )}
       <div
-        className={`flex flex-col ${styles.contentStyles || ''} ${margin || ''} ${postWidth || ''}`}
+        className={contentClassName}
       >
         <header className='text-xs'>
-          <time className='mr-4' dateTime={date}>
+          {date && <time className='mr-4' dateTime={date}>
             {date}
-          </time>
+          </time>}
           {categories && categories.map((category, index) => (
             <span
               key={index}
-              className={`px-3 rounded-full mr-2 ${categoryClassName}`}
+              className={categoryClassName}
             >
               {category}
             </span>

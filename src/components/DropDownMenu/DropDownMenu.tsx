@@ -43,7 +43,7 @@ const Dropdown: React.FC<DropdownProps> = ({ options }) => {
 
   return (
     <div
-      className={`relative inline-block ${isOpen ? 'card-shadow' : ''} rounded-2xl h-auto w-full`}
+      className={`relative inline-block px-6 md:px-0 ${isOpen ? 'card-shadow' : ''} rounded-2xl h-auto w-full`}
       ref={dropdownRef}
     >
       <div

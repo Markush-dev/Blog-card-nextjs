@@ -68,4 +68,5 @@ export const POST_DEFAULT_CONFIG: IConfig = {
   cardType: 'horizontal',
   configWidth: 'lg:w-1/2',
   fontSizeTitle: 'text-[40px]',
+  categoriesStyle: 'whiteCard',
 };

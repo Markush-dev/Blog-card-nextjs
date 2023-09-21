@@ -38,7 +38,7 @@ const options = {
 };
 const DoughnutBlogChart: FC<IProps> = ({ data, title }) => {
   return (
-    <div className='hidden md:flex flex-col bg-[#E3F9FC] rounded-2xl p-4'>
+    <div className='flex flex-col bg-[#E3F9FC] rounded-2xl p-4 max-w-[370px] md:max-w-full'>
       <span className='font-semibold'>{title}</span>
       <div className='mt-8'>
         <Doughnut data={data} options={options} />

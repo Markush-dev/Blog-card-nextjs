@@ -16,6 +16,11 @@
  box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.08);
 }
 
+.custom-post-style-text h2 {
+ line-height: 48px;
+ letter-spacing: -0.8px;
+}
+
 @screen md {
  .responsive-image {
   max-width: 30%;
@@ -33,7 +38,3 @@
  }
 }
 
-.custom-post-style-text h2 {
- line-height: 48px;
- letter-spacing: -0.8px;
-}

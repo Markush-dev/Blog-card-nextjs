@@ -1,22 +1,24 @@
-import { dataCard, dataSubscribe } from '@/app/mockBlogData';
+import React, { FC } from 'react';
+
 import BlogCard from '@/components/Blog/BlogCard';
+import ImageGridGallery from '@/components/ImageGridGallery';
+import CustomTitle from '@/components/CustomTitle';
+import BlogCardList from '@/components/Blog/BlogCardList';
+import SubscribeCard from '@/components/SubscribeCard';
+import Breadcrumb from '@/components/Breadcrumb';
+
 import {
   CARD_DEFAULT_STYLE_CONFIG,
   CARD_SUBSCRIBE_CONFIG,
   POST_DEFAULT_CONFIG,
 } from '@/app/config';
-import Breadcrumb from '@/components/Breadcrumb';
+
 import {
-  breadcrumbItemsPostPage,
-  breadcrumbItemsPostPageCategory,
-  imagesDesktop, imagesMobile,
+  breadcrumbItemsPostPage, breadcrumbItemsPostPageCategory, imagesDesktop, imagesMobile,
 } from '@/app/mockDataReportPage';
-import React, { FC } from 'react';
+import { dataCard, dataSubscribe } from '@/app/mockBlogData';
+
 import Image from 'next/image';
-import ImageGridGallery from '@/components/ImageGridGallery';
-import CustomTitle from '@/components/CustomTitle';
-import BlogCardList from '@/components/Blog/BlogCardList';
-import SubscribeCard from '@/components/SubscribeCard';
 
 interface IProps {
   params: {
@@ -26,9 +28,11 @@ interface IProps {
 
 const Page: FC<IProps> = ({ params: { id } }) => {
   const data = dataCard.find(el => el.id === Number(id));
-  if (!data) return;
+
+  if (!data) return <h1>No information found for this post</h1>;
+
   return (
-    <main className='flex flex-col relative min-h-screen max-w-[1440px] mx-auto items-center overflow-hidden'>
+    <>
       <div className='md:px-20'>
         <Breadcrumb items={breadcrumbItemsPostPage} />
         <div className='mt-4 custom-post-style-text'>
@@ -261,8 +265,7 @@ const Page: FC<IProps> = ({ params: { id } }) => {
           <BlogCardList data={dataCard.slice(1)} configuration={Object.values(CARD_DEFAULT_STYLE_CONFIG)} />
         </div>
       </div>
-    </main>
-
+    </>
   );
 };
 

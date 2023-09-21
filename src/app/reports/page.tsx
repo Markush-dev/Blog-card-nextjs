@@ -1,7 +1,7 @@
 import React from 'react';
+
 import HorizontalBarChart from '@/components/HorizontalBlogChart';
 import BusinessResilienceReport from '@/components/BusinessResilienceReport';
-import Image from 'next/image';
 import DropDownMenu from '@/components/DropDownMenu';
 import CustomTitle from '../../components/CustomTitle';
 import EconomicTrendsAnalyzerScheme from '@/components/EconomicTrendsAnalyzerScheme';
@@ -10,18 +10,21 @@ import ImageGridGallery from '@/components/ImageGridGallery';
 import BusinessOwnersViews from '@/components/BusinessOwnersViews';
 import ThematicBlock from '@/components/ThematicBlock';
 import BlogCard from '@/components/Blog/BlogCard';
-import { dataHelpBusiness, dataReview } from '@/app/mockBlogData';
-import { CARD_HELP_BUSINESS_CONFIG, CARD_REVIEW_CONFIG } from '@/app/config';
+import Breadcrumb from '@/components/Breadcrumb';
 import ColorInfoBlock from '@/components/ColorInfoBlock';
 import DoughnutBlogChart from '@/components/DoughnutBlogChart';
+
+import Image from 'next/image';
+
+import { dataHelpBusiness, dataReview } from '@/app/mockBlogData';
 import { mockDataChart, mockDataHorizontalChart } from '@/app/mockDataChart';
 import { breadcrumbItems, imagesDesktop, imagesMobile, options } from '@/app/mockDataReportPage';
-import Breadcrumb from '@/components/Breadcrumb';
 
+import { CARD_HELP_BUSINESS_CONFIG, CARD_REVIEW_CONFIG } from '@/app/config';
 
 const BlogPage = () => {
   return (
-    <main className='flex flex-col min-h-screen max-w-[1440px] mx-auto items-center overflow-hidden'>
+    <>
       <div className='relative sm:px-20 flex flex-col items-center'>
         <Image
           className='object-cover relative rounded-2xl h-96 mt-80 z-10 md:h-full md:mt-0 md:z-0'
@@ -32,7 +35,7 @@ const BlogPage = () => {
           priority={true}
         />
         <BusinessResilienceReport />
-        <Breadcrumb items={breadcrumbItems}/>
+        <Breadcrumb items={breadcrumbItems} />
         <div className='flex flex-col justify-center items-center px-0 md:px-8 mt-4 gap-x-16 md:items-start md:pr-0 md:flex-row'>
           <ThematicBlock
             title='As a small business owner in 2023, you wouldn’t be mistaken for thinking the economic outlook was bleak, but adversity breeds opportunity.'
@@ -86,7 +89,7 @@ const BlogPage = () => {
           services.</p>
       </div>
       <div className='px-8 md:px-0'>
-        <div className='hidden sm:inline mt-12'>
+        <div className='hidden sm:block mt-12'>
           <Image
             className='rounded-2xl'
             src='/inflation.png'
@@ -99,7 +102,7 @@ const BlogPage = () => {
             lorem dui dignissim vel condimentum molestie sagittis nulla ipsum sit ac nunc.
           </p>
         </div>
-        <div className='md:hidden mt-12'>
+        <div className='sm:hidden mt-12'>
           <Image
             className='rounded-2xl'
             src='/inflation2.png'
@@ -116,16 +119,16 @@ const BlogPage = () => {
 
       <div className='max-w-[842px]'>
         <ThematicBlock title='Why is inflation so high?' />
-        <div className='-mx-[140px] mt-12 md:hidden'>
+        <div className='-mx-[140px] mt-12 sm:hidden'>
           <ImageGridGallery imagePaths={imagesMobile} />
         </div>
-        <div className='hidden mt-12 md:inline'>
+        <div className='hidden mt-12 sm:block'>
           <ImageGridGallery imagePaths={imagesDesktop} />
         </div>
       </div>
       <BusinessOwnersViews />
       <ThematicBlock title='Why is inflation so high?' />
-      <div className='max-w-[842px] flex gap-4 mt-12'>
+      <div className='max-w-[842px] flex flex-col md:flex-row gap-4 mt-12'>
         <DoughnutBlogChart data={mockDataChart[0]} title='Estimated Increase in Business Costs Since 2022' />
         <DoughnutBlogChart data={mockDataChart[1]} title='Business Costs That Have Increased Since 2022' />
       </div>
@@ -153,15 +156,15 @@ const BlogPage = () => {
           titleClasses='md:text-2xl'
         />
         <ColorInfoBlock
-          classes='px-6 md:w-1/3'
+          classes='px-6 w-1/3 flex justify-center items-center'
           title='85%'
-          titleClasses='md:text-[120px] md:leading-[136px] md:font-normal'
+          titleClasses='md:text-[120px] md:leading-[136px] md:font-normal  text-5xl'
         />
       </div>
       <ThematicBlock title='Why is inflation so high?' />
       <div id='opportunities' className='flex justify-center mt-12 w-full bg-[#E3F9FC]'>
         <ColorInfoBlock
-          classes='pt-16 pb-12 max-w-[842px]'
+          classes='pt-16 pb-12 px-4 md:px-0 max-w-[842px]'
           title='Finding opportunities in crisis'
           element={<p className='mt-4'>While the hurdles brought about by inflation, rising interest rates and labour
             shortages will
@@ -181,7 +184,7 @@ const BlogPage = () => {
       <div className='mt-16 mb-8 sm:px-20 text-white'>
         <BlogCard data={dataHelpBusiness} configuration={CARD_HELP_BUSINESS_CONFIG} />
       </div>
-    </main>
+    </>
   );
 };
 

@@ -1,18 +1,17 @@
 import React from 'react';
 import BlogCardHeader from '@/components/Blog/BlogCardHeader';
 import BlogCard from '@/components/Blog/BlogCard';
-import { dataCard, dataSubscribe } from '@/app/mockBlogData';
-import {
-  CARD_DEFAULT_STYLE_CONFIG,
-  CARD_SUBSCRIBE_CONFIG,
-} from '@/app/config';
 import BlogCardList from '@/components/Blog/BlogCardList';
+
+import { dataCard, dataSubscribe } from '@/app/mockBlogData';
+
+import { CARD_DEFAULT_STYLE_CONFIG, CARD_SUBSCRIBE_CONFIG } from '@/app/config';
 
 const PostsPage = () => {
   return (
-    <main className='flex flex-col min-h-screen max-w-[1440px] mx-auto items-center'>
+    <>
       <div className='md:px-20'>
-          <BlogCardHeader title='All Posts' subtitle='Zeller Business Blog' />
+        <BlogCardHeader title='All Posts' subtitle='Zeller Business Blog' />
         <div className='flex flex-col gap-8'>
           <BlogCardList data={dataCard.slice(1)} configuration={Object.values(CARD_DEFAULT_STYLE_CONFIG)} />
           <BlogCardList data={dataCard.slice(1)} configuration={Object.values(CARD_DEFAULT_STYLE_CONFIG)} />
@@ -34,7 +33,7 @@ const PostsPage = () => {
         <BlogCardList data={dataCard.slice(1)} configuration={Object.values(CARD_DEFAULT_STYLE_CONFIG)} />
         <BlogCardList data={dataCard.slice(1)} configuration={Object.values(CARD_DEFAULT_STYLE_CONFIG)} />
       </div>
-    </main>
+    </>
   );
 };
 

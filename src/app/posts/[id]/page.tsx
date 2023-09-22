@@ -35,7 +35,7 @@ const Page: FC<IProps> = ({ params: { id } }) => {
     <>
       <div className='md:px-20'>
         <Breadcrumb items={breadcrumbItemsPostPage} />
-        <div className='mt-4 custom-post-style-text'>
+        <div className='mt-4 custom-post-style-height-article'>
           <BlogCard
             data={data}
             configuration={POST_DEFAULT_CONFIG}

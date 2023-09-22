@@ -38,7 +38,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ data, configuration }) => {
   }, [isVertical, cardType]);
 
   const imageClassName = useMemo(() => {
-    const baseClassName = 'object-cover';
+    const baseClassName = 'object-cover w-full';
     const responsiveImageClassName = cardType === 'horizontal' && !isVertical ? 'responsive-image' : '';
     const roundedImageClassName = !changeImagePosition
       ? styles.imageStyles

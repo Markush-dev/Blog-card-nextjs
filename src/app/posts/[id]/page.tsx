@@ -42,10 +42,10 @@ const Page: FC<IProps> = ({ params: { id } }) => {
           />
         </div>
       </div>
-      <div className='max-w-[276px] max-h-[440px] absolute right-0 hidden md:flex top-[490px]'>
+      <div className='max-w-[276px] max-h-[440px] absolute right-0 hidden xl:flex top-[490px]'>
         <SubscribeCard data={dataSubscribe} />
       </div>
-      <div className='max-w-[842px] pt-12 flex flex-col gap-y-16 px-8 md:px-0'>
+      <div className='max-w-[842px] pt-12 flex flex-col gap-y-16 px-8  xl:mr-60 lg:mr-0 2xl:mr-0'>
         <div className='flex flex-col text-lg gap-4'>
           <h2 className='text-2xl font-semibold'>As a merchant, you need to be constantly measuring your business
             performance so you know what’s working
@@ -119,7 +119,7 @@ const Page: FC<IProps> = ({ params: { id } }) => {
             lorem dui dignissim vel condimentum molestie sagittis nulla ipsum sit ac nunc.
           </p>
         </div>
-        <div className='md:hidden'>
+        <div className='sm:hidden'>
           <Image
             className='rounded-2xl'
             src='/inflation2.png'
@@ -157,7 +157,7 @@ const Page: FC<IProps> = ({ params: { id } }) => {
               times to ensure you’re making progress towards your goal.</p>
           </div>
         </div>
-        <div className='sm:hidden  text-white -mx-8'>
+        <div className='xl:hidden  text-white  sm:mx-auto'>
           <BlogCard data={dataSubscribe} configuration={CARD_SUBSCRIBE_CONFIG} />
         </div>
         <div>

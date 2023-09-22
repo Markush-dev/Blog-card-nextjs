@@ -42,7 +42,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ data, configuration }) => {
     const responsiveImageClassName = cardType === 'horizontal' && !isVertical ? 'responsive-image' : '';
     const roundedImageClassName = !changeImagePosition
       ? styles.imageStyles
-      : 'rounded-b-2xl md:rounded-tr-2xl md:rounded-br-2xl';
+      : 'rounded-b-2xl md:rounded-b-none md:rounded-tr-2xl md:rounded-br-2xl';
     const imageWidth = configWidth || '';
     return `${baseClassName} ${responsiveImageClassName} ${roundedImageClassName} ${imageWidth}`;
   }, [cardType, isVertical, changeImagePosition, styles, configWidth]);

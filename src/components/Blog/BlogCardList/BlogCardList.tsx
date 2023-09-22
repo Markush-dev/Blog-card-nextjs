@@ -5,16 +5,19 @@ import { IConfig } from '@/app/config';
 
 interface BlogCardProps {
   data: BlogData[];
-  configuration: IConfig[];
+  configuration: Record<number, IConfig> | IConfig;
+  differentColor?: boolean;
 }
 
-const BlogCardList: FC<BlogCardProps> = ({ data, configuration }) => {
+const BlogCardList: FC<BlogCardProps> = ({ data, configuration, differentColor }) => {
   return (
-    <div className='flex flex-col md:flex-row px-2 md:px-0 gap-8'>
+    <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8'>
       {data.map((item, index) => (
         <BlogCard
           data={item}
-          configuration={configuration[index]}
+          configuration={differentColor
+            ? (configuration as Record<number, IConfig>)[index]
+            : (configuration as IConfig)}
           key={index}
         />
       ))}

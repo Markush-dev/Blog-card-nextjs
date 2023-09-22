@@ -21,13 +21,14 @@ import { mockDataChart, mockDataHorizontalChart } from '@/app/mockDataChart';
 import { breadcrumbItems, imagesDesktop, imagesMobile, options } from '@/app/mockDataReportPage';
 
 import { CARD_HELP_BUSINESS_CONFIG, CARD_REVIEW_CONFIG } from '@/app/config';
+import MobileTrendsScheme from '@/components/EconomicTrendsAnalyzerScheme/MobileTrendsScheme';
 
 const BlogPage = () => {
   return (
     <>
       <div className='relative sm:px-20 flex flex-col items-center'>
         <Image
-          className='object-cover relative rounded-2xl h-96 mt-80 z-10 md:h-full md:mt-0 md:z-0'
+          className='object-cover relative rounded-2xl h-96 mt-80 z-10 lg:h-full lg:mt-0 lg:z-0'
           src='/billsFarm.png'
           alt='billsFarm'
           width={1280}
@@ -36,7 +37,7 @@ const BlogPage = () => {
         />
         <BusinessResilienceReport />
         <Breadcrumb items={breadcrumbItems} />
-        <div className='flex flex-col justify-center items-center px-0 md:px-8 mt-4 gap-x-16 md:items-start md:pr-0 md:flex-row'>
+        <div className='flex flex-col justify-center items-center px-0 md:px-8 mt-4 gap-x-16 md:items-start md:pr-0 xl:flex-row'>
           <ThematicBlock
             title='As a small business owner in 2023, you wouldn’t be mistaken for thinking the economic outlook was bleak, but adversity breeds opportunity.'
             classes='max-w-full px-0'
@@ -73,22 +74,24 @@ const BlogPage = () => {
           </p>
         </div>
       </div>
-      <div className='w-full hidden md:flex flex-col justify-center items-center'>
+      <div className='w-full flex flex-col justify-center items-center px-8 lg:px-0'>
         <CustomTitle
           title='Connecting the dots: inflation, interest rates and labour shortages'
           color='blue1000'
           classes='mt-6 max-w-[700px] md:text-[32px]'
         />
         <EconomicTrendsAnalyzerScheme />
+        <MobileTrendsScheme />
         <EconomicInflationInfo />
-        <p className='mt-12 max-w-[842px]'>As you can see from the graph, inflation reached its highest point at the end
+        <p className='mt-12 max-w-[842px] hidden md:block'>As you can see from the graph, inflation reached its highest
+          point at the end
           of 2022, when the inflation rate reached 7.8% — the highest it had been in three decades. At the time of
           writing, the inflation rate has dropped slightly to 7%. What this means is that on average the price of goods
           and services is 7% higher than this time last year. This doesn’t necessarily mean that everything has become
           7% more expensive, it simply reflects the average change in prices across a broad basket of goods and
           services.</p>
       </div>
-      <div className='px-8 md:px-0'>
+      <div className='px-8 lg:px-0'>
         <div className='hidden sm:block mt-12'>
           <Image
             className='rounded-2xl'

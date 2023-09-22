@@ -13,10 +13,8 @@ export interface IConfig {
   configWidth?: string;
 }
 
-export const CARD_DEFAULT_STYLE_CONFIG: { [key: number]: IConfig } = {
-  0: { cardType: 'vertical', bgColor: 'grey30', categoriesStyle: 'grayCard' },
-  1: { cardType: 'vertical', bgColor: 'grey30', categoriesStyle: 'grayCard' },
-  2: { cardType: 'vertical', bgColor: 'grey30', categoriesStyle: 'grayCard' },
+export const CARD_DEFAULT_STYLE_CONFIG: IConfig = {
+  cardType: 'vertical', bgColor: 'grey30', categoriesStyle: 'grayCard',
 };
 
 export const CARD_STYLE_COLOR_CONFIG: { [key: number]: IConfig } = {

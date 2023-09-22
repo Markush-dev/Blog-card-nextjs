@@ -8,30 +8,26 @@ import { dataCard, dataSubscribe } from '@/app/mockBlogData';
 import { CARD_DEFAULT_STYLE_CONFIG, CARD_SUBSCRIBE_CONFIG } from '@/app/config';
 
 const PostsPage = () => {
+  const mockDataRowCard = [...dataCard.slice(1), ...dataCard.slice(1)];
   return (
     <>
       <div className='md:px-20'>
         <BlogCardHeader title='All Posts' subtitle='Zeller Business Blog' />
         <div className='flex flex-col gap-8'>
-          <BlogCardList data={dataCard.slice(1)} configuration={Object.values(CARD_DEFAULT_STYLE_CONFIG)} />
-          <BlogCardList data={dataCard.slice(1)} configuration={Object.values(CARD_DEFAULT_STYLE_CONFIG)} />
+          <BlogCardList data={mockDataRowCard} configuration={CARD_DEFAULT_STYLE_CONFIG} />
         </div>
       </div>
       <div className='mt-16 mb-8 sm:px-20 text-white'>
         <BlogCard data={dataSubscribe} configuration={CARD_SUBSCRIBE_CONFIG} />
       </div>
-      <div className='flex flex-col gap-8 py-10 sm:px-20'>
-        <BlogCardList data={dataCard.slice(1)} configuration={Object.values(CARD_DEFAULT_STYLE_CONFIG)} />
-        <BlogCardList data={dataCard.slice(1)} configuration={Object.values(CARD_DEFAULT_STYLE_CONFIG)} />
-        <BlogCardList data={dataCard.slice(1)} configuration={Object.values(CARD_DEFAULT_STYLE_CONFIG)} />
-        <BlogCardList data={dataCard.slice(1)} configuration={Object.values(CARD_DEFAULT_STYLE_CONFIG)} />
+      <div className='flex flex-col gap-8 pt-10 sm:px-20'>
+        <BlogCardList data={[...mockDataRowCard, ...mockDataRowCard]} configuration={CARD_DEFAULT_STYLE_CONFIG} />
       </div>
       <div className='mt-16 mb-8 sm:px-20 text-white'>
         <BlogCard data={dataSubscribe} configuration={CARD_SUBSCRIBE_CONFIG} />
       </div>
       <div className='flex flex-col gap-8 py-10 sm:px-20'>
-        <BlogCardList data={dataCard.slice(1)} configuration={Object.values(CARD_DEFAULT_STYLE_CONFIG)} />
-        <BlogCardList data={dataCard.slice(1)} configuration={Object.values(CARD_DEFAULT_STYLE_CONFIG)} />
+        <BlogCardList data={dataCard.slice(1)} configuration={CARD_DEFAULT_STYLE_CONFIG} />
       </div>
     </>
   );

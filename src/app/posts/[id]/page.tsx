@@ -262,7 +262,7 @@ const Page: FC<IProps> = ({ params: { id } }) => {
       <div className='md:px-20 md:mt-20'>
         <Breadcrumb items={breadcrumbItemsPostPageCategory} />
         <div className='flex flex-col gap-8 mt-4'>
-          <BlogCardList data={dataCard.slice(1)} configuration={Object.values(CARD_DEFAULT_STYLE_CONFIG)} />
+          <BlogCardList data={dataCard.slice(1)} configuration={CARD_DEFAULT_STYLE_CONFIG} />
         </div>
       </div>
     </>

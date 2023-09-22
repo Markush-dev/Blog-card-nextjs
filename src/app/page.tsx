@@ -19,7 +19,7 @@ export default function Home() {
             data={dataCard[0]}
             configuration={BLOG_CARD_DEFAULT_CONFIG}
           />
-          <BlogCardList data={dataCard.slice(1)} configuration={Object.values(CARD_DEFAULT_STYLE_CONFIG)} />
+          <BlogCardList data={dataCard.slice(1)} configuration={CARD_DEFAULT_STYLE_CONFIG} />
         </div>
 
       </div>
@@ -33,7 +33,7 @@ export default function Home() {
             data={dataColorCard}
             configuration={BLOG_CARD_CONFIG}
           />
-          <BlogCardList data={dataCard.slice(1)} configuration={Object.values(CARD_STYLE_COLOR_CONFIG)} />
+          <BlogCardList differentColor data={dataCard.slice(1)} configuration={CARD_STYLE_COLOR_CONFIG} />
         </div>
 
       </div>

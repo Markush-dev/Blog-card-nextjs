@@ -23,16 +23,23 @@ export const imagesMobile = [
 ];
 
 export const breadcrumbItems = [
-  { label: 'Zeller Business Blog', url: '/posts' },
+  { label: 'Zeller Business Blog', url: '/' },
   { label: 'Reports', url: '/reports' },
+  { label: 'Zeller Small Business Resilience Report', url: '' },
 ];
 
 export const breadcrumbItemsPostPage = [
-  { label: 'Zeller Business Blog', url: '/posts' },
-  { label: 'Posts', url: '/post' },
+  { label: 'Zeller Business Blog', url: '/' },
+  { label: 'Posts', url: '/posts' },
+  { label: 'How to Know if Your Business is Successful', url: '' },
 ];
 
 export const breadcrumbItemsPostPageCategory = [
   { label: 'Zeller Business Blog', url: '/posts' },
   { label: 'Categories', url: '/categories' },
+];
+
+export const breadcrumbItemsAllPost = [
+  { label: 'Zeller Business Blog', url: '/' },
+  { label: 'All post', url: '/posts' },
 ];

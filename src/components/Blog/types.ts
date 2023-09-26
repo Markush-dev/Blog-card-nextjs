@@ -5,5 +5,4 @@ export interface BlogData {
   categories?: string[];
   title: string;
   content: string;
-  bgColorCard?: string;
 }

@@ -14,7 +14,7 @@ export default function Home() {
     <>
       <div className='sm:px-20'>
         <BlogCardHeader title='Zeller Business Blog' />
-        <div className='flex flex-col gap-16'>
+        <div className='flex flex-col items-center gap-16 '>
           <BlogCard
             data={dataCard[0]}
             configuration={BLOG_CARD_DEFAULT_CONFIG}
@@ -28,7 +28,7 @@ export default function Home() {
       </div>
       <div className='flex flex-col bg-gray-50 py-10 sm:px-20'>
         <BlogCardHeader title='Zeller Partner Hub' />
-        <div className='flex flex-col gap-16'>
+        <div className='flex flex-col items-center gap-16'>
           <BlogCard
             data={dataColorCard}
             configuration={BLOG_CARD_CONFIG}

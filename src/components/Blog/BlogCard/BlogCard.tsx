@@ -59,7 +59,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ data, configuration }) => {
   }, [changeImagePosition, styles.customBlockStyles]);
 
   const contentClassName = useMemo(() => {
-    const baseClassName = 'flex flex-col';
+    const baseClassName = 'flex flex-col overflow-hidden';
     const customContentStylesClassName = styles.contentStyles || '';
     const marginClassName = margin || '';
     const contentWidthClassName = configWidth || '';
@@ -90,19 +90,27 @@ const BlogCard: React.FC<BlogCardProps> = ({ data, configuration }) => {
       <div
         className={contentClassName}
       >
-        <header className='text-xs'>
-          {date && <time className='mr-4' dateTime={date}>
-            {date}
-          </time>}
-          {categories && categories.map((category, index) => (
-            <span
-              key={index}
-              className={categoryClassName}
-            >
-              {category}
-            </span>
-          ))}
+        <header className='text-xs flex items-center'>
+          <div className='mr-4 h-6'>
+            {date && (
+              <time dateTime={date}>
+                {date}
+              </time>
+            )}
+          </div>
+          <div className='overflow-x-auto h-6 whitespace-nowrap max-w-[240px] sm:max-w-full'>
+            {categories && categories.map((category, index) => (
+              <span
+                key={index}
+                className={categoryClassName}
+              >
+                 {category}
+              </span>
+            ))}
+          </div>
         </header>
+
+
         <h2 className={`${fontSizeTitle || 'text-[22px]'} font-semibold`}>{title}</h2>
         <p>{content}</p>
         {hasBtn && btnName && <CustomBtn name={btnName} />}

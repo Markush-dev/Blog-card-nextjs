@@ -6,13 +6,18 @@ import BlogCardList from '@/components/Blog/BlogCardList';
 import { dataCard, dataSubscribe } from '@/app/mockBlogData';
 
 import { CARD_DEFAULT_STYLE_CONFIG, CARD_SUBSCRIBE_CONFIG } from '@/app/config';
+import Breadcrumb from '@/components/Breadcrumb';
+import { breadcrumbItemsAllPost } from '@/app/mockDataReportPage';
 
 const PostsPage = () => {
   const mockDataRowCard = [...dataCard.slice(1), ...dataCard.slice(1)];
   return (
     <>
       <div className='md:px-20'>
-        <BlogCardHeader title='All Posts' subtitle='Zeller Business Blog' />
+        <div className='mb-4'>
+          <Breadcrumb items={breadcrumbItemsAllPost} />
+        </div>
+        <BlogCardHeader title='All Posts' />
         <div className='flex flex-col gap-8'>
           <BlogCardList data={mockDataRowCard} configuration={CARD_DEFAULT_STYLE_CONFIG} />
         </div>

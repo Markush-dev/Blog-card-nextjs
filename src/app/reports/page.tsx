@@ -28,7 +28,7 @@ const BlogPage = () => {
     <>
       <div className='relative sm:px-20 flex flex-col items-center'>
         <Image
-          className='object-cover relative rounded-2xl h-96 mt-80 z-10 lg:h-full lg:mt-0 lg:z-0'
+          className='object-cover relative rounded-2xl h-96 mt-72 z-10 lg:h-full lg:mt-0 lg:z-0'
           src='/billsFarm.png'
           alt='billsFarm'
           width={1280}
@@ -120,7 +120,7 @@ const BlogPage = () => {
         </div>
       </div>
 
-      <div className='max-w-[842px]'>
+      <div className='max-w-[842px] overflow-hidden'>
         <ThematicBlock title='Why is inflation so high?' />
         <div className='-mx-[140px] mt-12 sm:hidden'>
           <ImageGridGallery imagePaths={imagesMobile} />
@@ -156,12 +156,12 @@ const BlogPage = () => {
         <ColorInfoBlock
           classes='py-5 px-6'
           title='Percentage of respondents looking to cut costs in their business.'
-          titleClasses='md:text-2xl'
+          titleClasses='md:text-2xl md:pr-20 md:leading-7'
         />
         <ColorInfoBlock
-          classes='px-6 w-1/3 flex justify-center items-center'
+          classes='md:px-6 max-w-[283px] flex justify-center items-center'
           title='85%'
-          titleClasses='md:text-[120px] md:leading-[136px] md:font-normal  text-5xl'
+          titleClasses='sm:text-[120px] sm:leading-[136px] sm:font-normal text-7xl'
         />
       </div>
       <ThematicBlock title='Why is inflation so high?' />

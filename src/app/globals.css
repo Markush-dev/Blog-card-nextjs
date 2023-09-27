@@ -39,3 +39,9 @@
 .card-minHeight {
  min-height: 320px;
 }
+
+.category-mask {
+ mask-image: linear-gradient(to right, black 80%, transparent 120%);
+}
+
+

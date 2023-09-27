@@ -13,7 +13,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ data, configuration }) => {
   const {
     cardType, bgColor, hasBtn, btnName,
     changeImagePosition, categoriesStyle, margin,
-    configWidth, fontSizeTitle, splitText,
+    configWidth, fontSizeTitle, splitText, cardShadow,
   } = configuration;
 
   const { imageUrl, date, categories, title, content, id } = data;
@@ -48,18 +48,21 @@ const BlogCard: React.FC<BlogCardProps> = ({ data, configuration }) => {
   }, [cardType, isVertical, changeImagePosition, styles, configWidth]);
 
   const categoryClassName = useMemo(() => {
-    return `px-3 rounded-full mr-2 ${categoriesStyle ? categoryStylesClassName[categoriesStyle] : ''}`;
+    return `px-3 py-0.5 whitespace-nowrap  rounded-full mr-2  ${categoriesStyle
+      ? categoryStylesClassName[categoriesStyle]
+      : ''}`;
   }, [categoriesStyle]);
 
   const articleClassName = useMemo(() => {
     const baseClassName = 'flex cursor-pointer card-minHeight';
     const justifyBetweenClassName = changeImagePosition ? 'justify-between' : '';
     const customBlockStylesClassName = styles.customBlockStyles || '';
-    return `${baseClassName} ${justifyBetweenClassName} ${customBlockStylesClassName}`;
-  }, [changeImagePosition, styles.customBlockStyles]);
+    const shadowForCard = cardShadow ? 'card-shadow' : '';
+    return `${baseClassName} ${justifyBetweenClassName} ${customBlockStylesClassName} ${shadowForCard}`;
+  }, [changeImagePosition, cardShadow, styles.customBlockStyles]);
 
   const contentClassName = useMemo(() => {
-    const baseClassName = 'flex flex-col justify-center w-full overflow-hidden';
+    const baseClassName = 'flex flex-col justify-center relative w-full overflow-hidden ';
     const customContentStylesClassName = styles.contentStyles || '';
     const marginClassName = margin || '';
     const contentWidthClassName = configWidth || '';
@@ -90,25 +93,27 @@ const BlogCard: React.FC<BlogCardProps> = ({ data, configuration }) => {
       <div
         className={contentClassName}
       >
-        {(date || categories) && <header className='text-xs flex items-center'>
-          <div className='mr-4 h-6'>
-            {date && (
-              <time dateTime={date}>
-                {date}
-              </time>
-            )}
-          </div>
-          <div className='overflow-x-auto h-6 whitespace-nowrap max-w-[240px] sm:max-w-full'>
-            {categories && categories.map((category, index) => (
-              <span
-                key={index}
-                className={categoryClassName}
-              >
+          {(date || categories) && <header className='text-xs h-8 flex items-center category-mask w-full'>
+            <div className='mr-4 whitespace-nowrap'>
+              {date && (
+                <time dateTime={date}>
+                  {date}
+                </time>
+              )}
+            </div>
+            <div className='max-w-[240px] w-full sm:max-w-full '>
+              {categories && categories.map((category, index) => (
+                <span
+                  key={index}
+                  className={categoryClassName}
+                >
                  {category}
               </span>
-            ))}
-          </div>
-        </header>}
+              ))}
+            </div>
+          </header>}
+
+        {/*<div style={{boxShadow: '-20px 0px 23px -3px rgba(0,0,0,1)'}} className='bg-red-500 w-1 h-7 absolute top-0 right-0'></div>*/}
 
 
         <h2 className={`${fontSizeTitle || 'text-[22px]'} font-semibold`}>{title}</h2>

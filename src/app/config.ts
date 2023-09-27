@@ -12,6 +12,7 @@ export interface IConfig {
   fontSizeTitle?: string;
   configWidth?: string;
   splitText?: boolean;
+  cardShadow?: boolean;
 }
 
 export const CARD_DEFAULT_STYLE_CONFIG: IConfig = {
@@ -43,6 +44,7 @@ export const BLOG_CARD_CONFIG: IConfig = {
 export const BLOG_CARD_DEFAULT_CONFIG: IConfig = {
   cardType: 'horizontal',
   categoriesStyle: 'whiteCard',
+  cardShadow: true,
 };
 
 export const BLOG_CARD_BLACK_CONFIG: IConfig = {
@@ -73,4 +75,5 @@ export const POST_DEFAULT_CONFIG: IConfig = {
   configWidth: 'lg:w-1/2',
   fontSizeTitle: 'text-[40px]',
   categoriesStyle: 'whiteCard',
+  cardShadow: true,
 };

@@ -13,9 +13,9 @@ const BlogCard: React.FC<BlogCardProps> = ({ data, configuration }) => {
   const {
     cardType, bgColor, hasBtn, btnName,
     changeImagePosition, categoriesStyle, margin,
-    configWidth, fontSizeTitle,
-
+    configWidth, fontSizeTitle, splitText,
   } = configuration;
+
   const { imageUrl, date, categories, title, content, id } = data;
   const router = useRouter();
 
@@ -52,14 +52,14 @@ const BlogCard: React.FC<BlogCardProps> = ({ data, configuration }) => {
   }, [categoriesStyle]);
 
   const articleClassName = useMemo(() => {
-    const baseClassName = 'flex cursor-pointer';
+    const baseClassName = 'flex cursor-pointer card-minHeight';
     const justifyBetweenClassName = changeImagePosition ? 'justify-between' : '';
     const customBlockStylesClassName = styles.customBlockStyles || '';
     return `${baseClassName} ${justifyBetweenClassName} ${customBlockStylesClassName}`;
   }, [changeImagePosition, styles.customBlockStyles]);
 
   const contentClassName = useMemo(() => {
-    const baseClassName = 'flex flex-col overflow-hidden';
+    const baseClassName = 'flex flex-col justify-center w-full overflow-hidden';
     const customContentStylesClassName = styles.contentStyles || '';
     const marginClassName = margin || '';
     const contentWidthClassName = configWidth || '';
@@ -90,7 +90,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ data, configuration }) => {
       <div
         className={contentClassName}
       >
-        <header className='text-xs flex items-center'>
+        {(date || categories) && <header className='text-xs flex items-center'>
           <div className='mr-4 h-6'>
             {date && (
               <time dateTime={date}>
@@ -108,11 +108,14 @@ const BlogCard: React.FC<BlogCardProps> = ({ data, configuration }) => {
               </span>
             ))}
           </div>
-        </header>
+        </header>}
 
 
         <h2 className={`${fontSizeTitle || 'text-[22px]'} font-semibold`}>{title}</h2>
-        <p>{content}</p>
+        {splitText ? <div>
+          <p>{content.split('.')[0]}.</p>
+          <p>{content.split('.')[1]}.</p>
+        </div> : <p>{content}</p>}
         {hasBtn && btnName && <CustomBtn name={btnName} />}
       </div>
       {changeImagePosition && (

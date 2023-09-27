@@ -11,6 +11,7 @@ export interface IConfig {
   margin?: string;
   fontSizeTitle?: string;
   configWidth?: string;
+  splitText?: boolean;
 }
 
 export const CARD_DEFAULT_STYLE_CONFIG: IConfig = {
@@ -29,6 +30,8 @@ export const CARD_SUBSCRIBE_CONFIG: IConfig = {
   hasBtn: true,
   btnName: 'Subscribe',
   bgColor: 'blue1000',
+  fontSizeTitle: 'text-2xl',
+  margin: 'md:mr-8',
 };
 
 export const BLOG_CARD_CONFIG: IConfig = {
@@ -60,6 +63,9 @@ export const CARD_HELP_BUSINESS_CONFIG: IConfig = {
   hasBtn: true,
   btnName: 'Leave your details',
   bgColor: 'blue1000',
+  fontSizeTitle: 'text-2xl',
+  margin: 'md:mr-8',
+  splitText: true,
 };
 
 export const POST_DEFAULT_CONFIG: IConfig = {

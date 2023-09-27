@@ -64,7 +64,7 @@ export const dataReview = {
 
 export const dataHelpBusiness =
   {
-    imageUrl: '/subscribe.png',
+    imageUrl: '/payment4.png',
     title: 'Let us help your business grow.',
     content: 'Zeller Sales is here to help you succeed. Leave your contact details and we’ll be in touch soon.',
   };

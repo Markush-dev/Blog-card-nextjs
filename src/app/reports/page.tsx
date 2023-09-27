@@ -184,7 +184,7 @@ const BlogPage = () => {
         />
       </div>
       <ThematicBlock title='Why is inflation so high?' />
-      <div className='mt-16 mb-8 sm:px-20 text-white'>
+      <div className='mt-16 mb-8 sm:px-20 w-full text-white'>
         <BlogCard data={dataHelpBusiness} configuration={CARD_HELP_BUSINESS_CONFIG} />
       </div>
     </>

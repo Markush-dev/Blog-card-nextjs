@@ -5,7 +5,7 @@ export const styleObject = {
     contentStyles: 'mt-8 gap-3 pl-8 pr-6 pb-10',
   },
   horizontal: {
-    customBlockStyles: 'card-shadow h-80 rounded-2xl',
+    customBlockStyles: 'card-shadow rounded-2xl',
     imageStyles: 'rounded-tl-2xl rounded-bl-2xl ',
     contentStyles: 'py-12 px-8 gap-y-4',
   },

@@ -18,18 +18,18 @@ const Dropdown = () => {
     <Menu>
       {({ open }) => (
         <div className='relative'>
-          <Menu.Button>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className='inline-flex justify-center w-full px-3 py-1 text-sm bg-[#F7FAFD] rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75'
-            >
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <Menu.Button className='inline-flex justify-center w-full px-3 py-1 text-sm bg-[#F7FAFD] rounded-full '>
               <div className='flex justify-between items-center'>
                 Categories
                 <ArrowIcon classes={`ml-1.5 ${open && 'rotate-180'}`} />
               </div>
-            </motion.button>
-          </Menu.Button>
+            </Menu.Button>
+          </motion.div>
+
           <AnimatePresence>
             {open && (
               <motion.div

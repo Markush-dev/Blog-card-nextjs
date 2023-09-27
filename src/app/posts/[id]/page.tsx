@@ -44,7 +44,7 @@ const Page: FC<IProps> = ({ params: { id } }) => {
         </div>
       </div>
       <div className='flex justify-end w-full'>
-        <div className='max-w-[842px] pt-12 sm:mr-8 px-8 sm:px-0 flex flex-col gap-y-16 overflow-hidden'>
+        <div className='max-w-[842px] pt-12 sm:mr-8 px-8 xl:px-0 flex flex-col sm:gap-y-16 gap-y-8 overflow-hidden'>
           <div className='flex flex-col text-lg gap-4'>
             <h2 className='text-2xl font-semibold'>As a merchant, you need to be constantly measuring your business
               performance so you know what’s working
@@ -167,7 +167,7 @@ const Page: FC<IProps> = ({ params: { id } }) => {
                 times to ensure you’re making progress towards your goal.</p>
             </div>
           </div>
-          <div className='xl:hidden  text-white  sm:mx-auto'>
+          <div className='md:hidden text-white -mx-8 sm:mx-auto'>
             <BlogCard data={dataSubscribe} configuration={CARD_SUBSCRIBE_CONFIG} />
           </div>
           <div>
@@ -277,7 +277,7 @@ const Page: FC<IProps> = ({ params: { id } }) => {
             </div>
           </div>
         </div>
-        <div className='max-w-[276px] max-h-[440px] mt-20 sticky hidden xl:flex top-4'>
+        <div className='max-w-[276px] lg:max-h-[440px] max-h-[500px] mt-20 sticky hidden md:flex top-4'>
           <SubscribeCard data={dataSubscribe} />
         </div>
       </div>

@@ -12,7 +12,7 @@ export interface BreadcrumbProps {
 
 const Breadcrumb: FC<BreadcrumbProps> = ({ items }) => {
   return (
-    <nav className='self-start flex mt-8 pl-8 text-xs' aria-label="Breadcrumb">
+    <nav className='self-start flex mt-8 pl-8 text-xs overflow-hidden' aria-label="Breadcrumb">
       <ol className="flex shrink-0 space-x-2">
         {items.map((item, index) => (
           <li key={index} className={`${index === items.length - 1 ? 'font-normal text-gray-500' : 'font-semibold'}`}>

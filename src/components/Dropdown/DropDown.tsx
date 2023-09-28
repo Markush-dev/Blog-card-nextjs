@@ -3,14 +3,16 @@ import { Menu } from '@headlessui/react';
 import { AnimatePresence, motion } from 'framer-motion';
 import React from 'react';
 import ArrowIcon from '@/icons/ArrowIcon';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 const items = [
-  { href: '/', label: 'Payments' },
-  { href: '/', label: 'Secturity' },
-  { href: '/', label: 'Wellness & Productivity' },
-  { href: '/', label: 'Cloud-based POS' },
-  { href: '/', label: 'On Premise POS' },
-  { href: '/', label: 'Zeller Integrated' },
+  { href: `/blogs/${encodeURIComponent('payments')}`, label: 'Payments' },
+  { href: `/blogs/${encodeURIComponent('security')}`, label: 'Security' },
+  { href: `/blogs/${encodeURIComponent('wellness & productivity')}`, label: 'Wellness & Productivity' },
+  { href: `/blogs/${encodeURIComponent('cloud-based pos')}`, label: 'Cloud-based POS' },
+  { href: `/blogs/${encodeURIComponent('on Premise pos')}`, label: 'On Premise POS' },
+  { href: `/blogs/${encodeURIComponent('zeller integrated')}`, label: 'Zeller Integrated' },
 ];
 
 const Dropdown = () => {
@@ -42,17 +44,22 @@ const Dropdown = () => {
                 {items.map((item, index) => (
                   <Menu.Item key={index}>
                     {({ active }) => (
-                      <a
-                        href={item.href}
-                        className={`${active
-                          ? 'bg-[#F7FAFD]'
-                          : ''} flex items-center px-4 py-2 h-12 text-sm text-gray-700`}
+                      <div
+                        role='none'
                       >
-                        {item.label}
-                      </a>
+                        <Link
+                          href={item.href}
+                          className={`z-20 ${active
+                            ? 'bg-[#F7FAFD]'
+                            : ''} flex items-center px-4 py-2 h-12 text-sm text-gray-700`}
+                        >
+                          {item.label}
+                        </Link>
+                      </div>
                     )}
                   </Menu.Item>
                 ))}
+
               </motion.div>
             )}
           </AnimatePresence>

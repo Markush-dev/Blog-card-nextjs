@@ -22,13 +22,13 @@ const PostsPage = () => {
           <BlogCardList data={mockDataRowCard} configuration={CARD_DEFAULT_STYLE_CONFIG} />
         </div>
       </div>
-      <div className='mt-16 mb-8 sm:px-20 text-white'>
+      <div className='mt-8 sm:mt-16 mb-8 sm:px-20 text-white'>
         <BlogCard data={dataSubscribe} configuration={CARD_SUBSCRIBE_CONFIG} />
       </div>
       <div className='flex flex-col gap-8 pt-10 sm:px-20'>
         <BlogCardList data={[...mockDataRowCard, ...mockDataRowCard]} configuration={CARD_DEFAULT_STYLE_CONFIG} />
       </div>
-      <div className='mt-16 mb-8 sm:px-20 text-white'>
+      <div className='mt-8 sm:mt-16 mb-8 sm:px-20 text-white'>
         <BlogCard data={dataSubscribe} configuration={CARD_SUBSCRIBE_CONFIG} />
       </div>
       <div className='flex flex-col gap-8 py-10 sm:px-20'>

@@ -1,7 +1,7 @@
 export const styleObject = {
   vertical: {
-    customBlockStyles: 'flex-col rounded-2xl max-w-md gap-4',
-    imageStyles: 'rounded-t-2xl',
+    customBlockStyles: 'flex-col rounded-2xl max-w-md gap-4 md:hover:scale-105 transition-all duration-300',
+    imageStyles: 'rounded-t-2xl h-60',
     contentStyles: 'mt-8 gap-3 px-6 pb-10',
   },
   horizontal: {

@@ -36,7 +36,7 @@ const BlogPage = () => {
           priority={true}
         />
         <BusinessResilienceReport />
-        <Breadcrumb items={breadcrumbItems} />
+        <Breadcrumb items={[...breadcrumbItems, { label: 'Zeller Small Business Resilience Report', url: '' }]} />
         <div className='flex flex-col justify-center items-center px-0 md:px-8 mt-4 gap-x-16 md:items-start md:pr-0 xl:flex-row'>
           <ThematicBlock
             title='As a small business owner in 2023, you wouldn’t be mistaken for thinking the economic outlook was bleak, but adversity breeds opportunity.'

@@ -1,7 +1,7 @@
 const EconomicInflationInfo = () => {
   return (
     <div
-      className='p-8 rounded-2xl mt-6 max-w-[842px]'
+      className='p-8 rounded-2xl mt-6 max-w-content'
       style={{ backgroundColor: `var(--${'blue1000'})` }}
 
     >

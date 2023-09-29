@@ -9,7 +9,7 @@ interface IProps {
 const MobileTrendBox: FC<IProps> = ({ text, textColor, bgColor }) => {
   return (
     <div
-      className={`w-32 h-32 sm:w-[200px] sm:h-[150px] sm:text-xl p-2 rounded-2xl flex justify-center items-center font-semibold ${bgColor || 'bg-white'}`}
+      className={`w-32 h-32 sm:w-[200px] sm:h-[150px] sm:text-xl p-2 rounded-2xl flex-center font-semibold ${bgColor || 'bg-white'}`}
       style={{ color: `var(--${textColor || ''})` }}
 
     >

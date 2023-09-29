@@ -37,7 +37,7 @@ const BlogPage = () => {
         />
         <BusinessResilienceReport />
         <Breadcrumb items={[...breadcrumbItems, { label: 'Zeller Small Business Resilience Report', url: '' }]} />
-        <div className='flex flex-col justify-center items-center px-0 md:px-8 mt-4 gap-x-16 md:items-start md:pr-0 xl:flex-row'>
+        <div className='flex-center flex-col px-0 md:px-8 mt-4 gap-x-16 md:items-start md:pr-0 xl:flex-row'>
           <ThematicBlock
             title='As a small business owner in 2023, you wouldn’t be mistaken for thinking the economic outlook was bleak, but adversity breeds opportunity.'
             classes='max-w-full px-0'
@@ -74,7 +74,7 @@ const BlogPage = () => {
           </p>
         </div>
       </div>
-      <div className='w-full flex flex-col justify-center items-center px-8 lg:px-0'>
+      <div className='w-full flex-center flex-col px-8 lg:px-0'>
         <CustomTitle
           title='Connecting the dots: inflation, interest rates and labour shortages'
           color='blue1000'
@@ -83,7 +83,7 @@ const BlogPage = () => {
         <EconomicTrendsAnalyzerScheme />
         <MobileTrendsScheme />
         <EconomicInflationInfo />
-        <p className='mt-12 max-w-[842px] hidden md:block'>As you can see from the graph, inflation reached its highest
+        <p className='mt-12 max-w-content hidden md:block'>As you can see from the graph, inflation reached its highest
           point at the end
           of 2022, when the inflation rate reached 7.8% — the highest it had been in three decades. At the time of
           writing, the inflation rate has dropped slightly to 7%. What this means is that on average the price of goods
@@ -120,7 +120,7 @@ const BlogPage = () => {
         </div>
       </div>
 
-      <div className='max-w-[842px] overflow-hidden'>
+      <div className='max-w-content overflow-hidden'>
         <ThematicBlock title='Why is inflation so high?' />
         <div className='-mx-[140px] mt-12 sm:hidden'>
           <ImageGridGallery imagePaths={imagesMobile} />
@@ -131,7 +131,7 @@ const BlogPage = () => {
       </div>
       <BusinessOwnersViews />
       <ThematicBlock title='Why is inflation so high?' />
-      <div className='max-w-[842px] flex flex-col md:flex-row gap-4 mt-12'>
+      <div className='max-w-content flex flex-col md:flex-row gap-4 mt-12'>
         <DoughnutBlogChart data={mockDataChart[0]} title='Estimated Increase in Business Costs Since 2022' />
         <DoughnutBlogChart data={mockDataChart[1]} title='Business Costs That Have Increased Since 2022' />
       </div>
@@ -152,22 +152,22 @@ const BlogPage = () => {
         />
       </div>
       <ThematicBlock title='Why is inflation so high?' />
-      <div className='flex gap-2 mt-12 max-w-[842px]'>
+      <div className='flex gap-2 mt-12 max-w-content'>
         <ColorInfoBlock
           classes='py-5 px-6'
           title='Percentage of respondents looking to cut costs in their business.'
           titleClasses='md:text-2xl md:pr-20 md:leading-7'
         />
         <ColorInfoBlock
-          classes='md:px-6 max-w-[283px] flex justify-center items-center'
+          classes='md:px-6 max-w-[283px] flex-center'
           title='85%'
-          titleClasses='sm:text-[120px] sm:leading-[136px] sm:font-normal text-7xl'
+          titleClasses='big-custom-text text-7xl'
         />
       </div>
       <ThematicBlock title='Why is inflation so high?' />
       <div id='opportunities' className='flex justify-center mt-12 w-full bg-[#E3F9FC]'>
         <ColorInfoBlock
-          classes='pt-16 pb-12 px-4 md:px-0 max-w-[842px]'
+          classes='pt-16 pb-12 px-4 md:px-0 max-w-content'
           title='Finding opportunities in crisis'
           element={<p className='mt-4'>While the hurdles brought about by inflation, rising interest rates and labour
             shortages will

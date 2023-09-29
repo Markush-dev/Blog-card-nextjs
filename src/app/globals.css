@@ -20,6 +20,12 @@
  height: auto;
 }
 
+@screen sm {
+ .big-custom-text {
+  @apply text-[120px] leading-[136px] font-normal
+ }
+}
+
 @screen md {
  .responsive-image {
   max-width: 40%;
@@ -44,4 +50,11 @@
  mask-image: linear-gradient(to right, black 80%, transparent 120%);
 }
 
+.big-custom-text {
+ @apply font-normal
+}
+
+.flex-center {
+ @apply flex justify-center items-center
+}
 

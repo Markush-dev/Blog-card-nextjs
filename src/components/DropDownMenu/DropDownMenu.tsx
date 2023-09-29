@@ -50,7 +50,7 @@ const Dropdown: React.FC<DropdownProps> = ({ options }) => {
         className={`flex items-center justify-between md:w-[272px] px-4 py-1 rounded-2xl bg-white ${!isOpen && 'card-shadow'}  cursor-pointer`}
         onClick={toggleDropdown}
       >
-        <span className=' font-semibold h-10 flex justify-center items-center'>{selectedOption}</span>
+        <span className=' font-semibold h-10 flex-center'>{selectedOption}</span>
         <ArrowIcon classes={`${isOpen ? 'rotate-180' : ''} ml-2`} />
       </div>
       {isOpen && (

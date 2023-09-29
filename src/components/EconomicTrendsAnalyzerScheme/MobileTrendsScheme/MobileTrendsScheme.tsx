@@ -5,7 +5,7 @@ import MobileTrendBox from '@/components/EconomicTrendsAnalyzerScheme/EconomicTr
 
 const MobileTrendsScheme = () => {
   return (
-    <div className='w-full xl:hidden max-w-[842px] flex flex-col items-center bg-[#E3F9FC] pt-8 px-4 mt-6 mb-12'>
+    <div className='w-full xl:hidden max-w-content flex flex-col items-center bg-[#E3F9FC] pt-8 px-4 mt-6 mb-12'>
       <div className='flex gap-4 text-center'>
         <div className='flex flex-col items-center gap-10'>
           <MobileTrendBox  text='People with more money' textColor='blue1000'/>

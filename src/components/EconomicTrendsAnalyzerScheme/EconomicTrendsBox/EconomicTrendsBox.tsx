@@ -9,7 +9,7 @@ interface IProps {
 const EconomicTrendsBox: FC<IProps> = ({ text, textColor, bgColor }) => {
   return (
     <div
-      className={`w-[200px] h-[150px] p-4 rounded-2xl flex justify-center items-center text-[22px] font-semibold ${bgColor || 'bg-white'}`}
+      className={`w-[200px] h-[150px] p-4 rounded-2xl flex-center text-[22px] font-semibold ${bgColor || 'bg-white'}`}
       style={{ color: `var(--${textColor || ''})` }}
 
     >

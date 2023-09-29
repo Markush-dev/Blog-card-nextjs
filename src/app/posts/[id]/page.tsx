@@ -44,7 +44,7 @@ const Page: FC<IProps> = ({ params: { id } }) => {
         </div>
       </div>
       <div className='flex justify-end w-full'>
-        <div className='max-w-[842px] pt-12 sm:mr-8 px-8 xl:px-0 flex flex-col sm:gap-y-16 gap-y-8 overflow-hidden'>
+        <div className='max-w-content pt-12 sm:mr-8 px-8 xl:px-0 flex flex-col sm:gap-y-16 gap-y-8 overflow-hidden'>
           <div className='flex flex-col text-lg gap-4'>
             <h2 className='text-2xl font-semibold'>As a merchant, you need to be constantly measuring your business
               performance so you know what’s working

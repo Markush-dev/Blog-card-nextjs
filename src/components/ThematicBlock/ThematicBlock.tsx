@@ -15,7 +15,7 @@ const mockElement = <p className='mt-5'>After two years of stimulus packages han
 
 const ThematicBlock: FC<IProps> = ({ title, titleClasses, element, classes }) => {
   return (
-    <div className={`max-w-[842px] px-8 md:p-0 ${classes || ''}`}>
+    <div className={`max-w-content px-8 md:p-0 ${classes || ''}`}>
       <CustomTitle
         title={title}
         color='blue1000'

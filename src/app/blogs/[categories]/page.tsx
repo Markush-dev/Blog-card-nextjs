@@ -1,12 +1,11 @@
-import React, { FC } from 'react';
-import Breadcrumb from '@/components/Breadcrumb';
+import React, { FC } from "react";
 
-import {
-  breadcrumbItemsBlogPageCategory,
-} from '@/app/mockDataReportPage';
-import { dataCard } from '@/app/mockBlogData';
-import { CARD_DEFAULT_STYLE_CONFIG } from '@/app/config';
-import BlogCardList from '@/components/Blog/BlogCardList';
+import Breadcrumb from "@/components/global/molecules/Breadcrumb";
+import BlogCardList from "@/components/global/organisms/Blog/BlogCardList";
+
+import { breadcrumbItemsBlogPageCategory } from "@/mockDataReportPage";
+import { dataCard } from "@/mockBlogData";
+import { CARD_DEFAULT_STYLE_CONFIG } from "@/config";
 
 interface IProps {
   params: {
@@ -31,15 +30,18 @@ const Page: FC<IProps> = ({ params: { categories } }) => {
 
   return (
     <>
-      <div className='md:px-20'>
+      <div className="md:px-20">
         <Breadcrumb
           items={[
             ...breadcrumbItemsBlogPageCategory,
-            { label: `${capitalizeEachWord(decodeCategories)}`, url: '/' },
+            { label: `${capitalizeEachWord(decodeCategories)}`, url: "/" },
           ]}
         />
-        <div className='mt-4'>
-          <BlogCardList data={filteredData} configuration={CARD_DEFAULT_STYLE_CONFIG} />
+        <div className="mt-4">
+          <BlogCardList
+            data={filteredData}
+            configuration={CARD_DEFAULT_STYLE_CONFIG}
+          />
         </div>
       </div>
     </>

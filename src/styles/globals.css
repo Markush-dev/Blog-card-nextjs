@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --blue1000: #0071ce;
+  --grey30: #f6f7f9;
+  --lightBlue: #6ac2e8;
+  --yellow1000: #f4be49;
+  --paleGreen: #ecf3da;
+  --blue400: #7baed4;
+  --black: #212322;
+}
+
+.card-shadow {
+  box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.08);
+}
+
+.custom-post-style-height-article article {
+  @apply h-auto;
+}
+
+@screen sm {
+  .big-custom-text {
+    @apply text-[120px] leading-[136px] font-normal;
+  }
+}
+
+@screen md {
+  .responsive-image {
+    max-width: 40%;
+  }
+}
+
+@screen lg {
+  .responsive-image {
+    max-width: 50%;
+  }
+}
+
+.rotate-270 {
+  transform: rotate(270deg);
+}
+
+.card-minHeight {
+  min-height: 320px;
+}
+
+.category-mask {
+  mask-image: linear-gradient(to right, black 80%, transparent 120%);
+}
+
+.big-custom-text {
+  @apply font-normal;
+}
+
+.flex-center {
+  @apply flex justify-center items-center;
+}

@@ -2,16 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --blue1000: #0071ce;
-  --grey30: #f6f7f9;
-  --lightBlue: #6ac2e8;
-  --yellow1000: #f4be49;
-  --paleGreen: #ecf3da;
-  --blue400: #7baed4;
-  --black: #212322;
-}
-
 .card-shadow {
   box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.08);
 }
@@ -56,4 +46,97 @@
 
 .flex-center {
   @apply flex justify-center items-center;
+}
+
+h1,
+.h1 {
+ @apply text-[32px] font-semibold leading-tight;
+}
+
+h2,
+.h2 {
+ @apply text-[32px] font-semibold leading-tight;
+}
+
+h3,
+.h3 {
+ @apply text-[24px] font-semibold;
+}
+
+h4,
+.h4 {
+ @apply text-[18px] font-semibold;
+}
+
+h5,
+.h5 {
+ @apply text-[14px] font-semibold;
+}
+
+@layer base {
+ .body-xs {
+  @apply text-[12px] font-normal leading-[18px];
+ }
+
+ .body-sm {
+  @apply text-[14px] font-normal leading-[20px];
+ }
+
+ .body-base {
+  @apply text-[16px] font-normal leading-[24px];
+ }
+
+ .body-lg {
+  @apply text-[18px] font-normal leading-[28px];
+ }
+
+ .heading-sm {
+  @apply text-[14px] font-semibold leading-[20px];
+ }
+
+ .heading-md {
+  @apply text-[16px] font-semibold leading-[24px];
+ }
+
+ .heading-lg {
+  @apply text-[18px] font-semibold leading-[28px];
+ }
+
+ .heading-xl-mobile {
+  @apply text-[20px] font-semibold leading-[24px];
+ }
+
+ .heading-xl {
+  @apply text-[22px] font-semibold leading-[30px];
+ }
+
+ .heading-2xl {
+  @apply text-[24px] font-semibold leading-[32px];
+ }
+
+ .heading-3xl {
+  @apply text-[32px] font-semibold leading-[40px];
+ }
+
+ .heading-4xl {
+  @apply text-[40px] font-semibold leading-[48px];
+ }
+}
+
+blockquote {
+ @apply relative;
+ quotes: '“' '”' '‘' '’';
+
+ &.hang {
+  &::before {
+   @apply absolute transform -translate-x-full
+  }
+ }
+
+ &::before {
+  content: open-quote;
+ }
+ &::after {
+  content: close-quote;
+ }
 }

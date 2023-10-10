@@ -34,7 +34,7 @@ const Dropdown = () => {
       {({ open }) => (
         <div className="relative">
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <Menu.Button className="inline-flex justify-center w-full px-3 py-1 text-sm bg-[#F7FAFD] rounded-full ">
+            <Menu.Button className="inline-flex justify-center w-full px-3 py-1 text-sm bg-blue-50 rounded-full ">
               <div className="flex justify-between items-center">
                 Categories
                 <ArrowIcon className={`ml-1.5 ${open && "rotate-180"}`} />
@@ -58,7 +58,7 @@ const Dropdown = () => {
                         <Link
                           href={item.href}
                           className={`z-20 ${
-                            active ? "bg-[#F7FAFD]" : ""
+                            active ? "bg-blue-50" : ""
                           } flex items-center px-4 py-2 h-12 text-sm text-gray-700`}
                         >
                           {item.label}

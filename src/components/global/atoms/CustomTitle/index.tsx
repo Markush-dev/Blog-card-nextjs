@@ -8,14 +8,7 @@ interface IProps {
 
 const CustomTitle: FC<IProps> = ({ title, color, classes }) => {
   return (
-    <h3
-      style={{ color: `var(--${color || ""})` }}
-      className={`font-semibold text-2xl  ${
-        classes || "md:text-[32px] md:leading-10"
-      }`}
-    >
-      {title}
-    </h3>
+    <h3 className={`${color || ""}  ${classes || "heading-3xl"}`}>{title}</h3>
   );
 };
 

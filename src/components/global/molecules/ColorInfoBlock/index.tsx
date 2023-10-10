@@ -20,7 +20,11 @@ const ColorInfoBlock: FC<IProps> = ({
 }) => {
   return (
     <div className={`w-full bg-[#E3F9FC] rounded-2xl ${classes}`}>
-      <CustomTitle title={title} color="blue1000" classes={titleClasses} />
+      <CustomTitle
+        title={title}
+        color="text-blue-1000"
+        classes={titleClasses}
+      />
       {text && <p className={textClasses || ""}>{text}</p>}
       {element && <>{element}</>}
     </div>

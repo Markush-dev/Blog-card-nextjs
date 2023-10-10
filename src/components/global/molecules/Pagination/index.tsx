@@ -73,7 +73,7 @@ const Pagination: FC<IProps> = ({
 
       const isCurrent = currentPage === pageNumber;
       const btnClasses = `relative inline-flex px-4 py-2 w-8 h-8 items-center justify-center rounded-full 
-      ${isCurrent ? "bg-[#0071CE] text-white" : "hover:bg-gray-50"} `;
+      ${isCurrent ? "bg-blue-1000 text-white" : "hover:bg-gray-50"} `;
       buttons.push(
         <div key={i} className="w-12 h-12 flex-center">
           <button

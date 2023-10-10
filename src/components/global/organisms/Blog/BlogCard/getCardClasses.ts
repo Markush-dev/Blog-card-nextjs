@@ -2,12 +2,14 @@ export const getArticleClass = (
   changeImagePosition?: boolean,
   styles?: string,
   cardShadow?: boolean,
+  bgColor?: string,
 ) => {
-  const baseClassName = "flex cursor-pointer card-minHeight";
+  const baseClassName = "w-full flex cursor-pointer card-minHeight";
   const justifyBetweenClassName = changeImagePosition ? "justify-between" : "";
   const customBlockStylesClassName = styles || "";
   const shadowForCard = cardShadow ? "card-shadow" : "";
-  return `${baseClassName} ${justifyBetweenClassName} ${customBlockStylesClassName} ${shadowForCard}`;
+  const background = bgColor || "";
+  return `${baseClassName} ${justifyBetweenClassName} ${customBlockStylesClassName} ${shadowForCard} ${background}`;
 };
 
 export const getContentClass = (

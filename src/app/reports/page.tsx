@@ -51,7 +51,7 @@ const BlogPage = () => {
           <ThematicBlock
             title="As a small business owner in 2023, you wouldn’t be mistaken for thinking the economic outlook was bleak, but adversity breeds opportunity."
             classes="max-w-full px-0"
-            titleClasses="md:text-[32px] mt-0"
+            titleClasses="md:heading-3xl mt-0"
             element={
               <p className="text-lg mt-6 mb-8">
                 From supply chain disruptions and skills shortages fuelled by
@@ -84,8 +84,8 @@ const BlogPage = () => {
         >
           <CustomTitle
             title="What are business owners most concerned about?"
-            color="blue1000"
-            classes="mt-6 md:text-[40px] text-4xl max-w-2xl"
+            color="text-blue-1000"
+            classes="mt-6 md:heading-4xl max-w-2xl"
           />
           <HorizontalBarChart data={mockDataHorizontalChart} />
           <p className="mt-6 max-w-[800px] ml-20">
@@ -101,8 +101,8 @@ const BlogPage = () => {
       <div className="w-full flex-center flex-col px-8 lg:px-0">
         <CustomTitle
           title="Connecting the dots: inflation, interest rates and labour shortages"
-          color="blue1000"
-          classes="mt-6 max-w-[700px] md:text-[32px]"
+          color="text-blue-1000"
+          classes="mt-6 max-w-[700px] md:heading-3xl"
         />
         <EconomicTrendsAnalyzerScheme />
         <MobileTrendsScheme />
@@ -128,7 +128,7 @@ const BlogPage = () => {
             height={543}
             priority={true}
           />
-          <p className="text-sm text-[#6D7274] max-w-md mt-6">
+          <p className="text-sm text-grey-550 max-w-md mt-6">
             Purus morbi egestas odio egestas ac id leo egestas purus, lorem dui
             dignissim vel condimentum molestie sagittis nulla ipsum sit ac nunc.
           </p>
@@ -142,7 +142,7 @@ const BlogPage = () => {
             height={543}
             priority={true}
           />
-          <p className="text-sm text-[#6D7274] max-w-md mt-6">
+          <p className="text-sm text-grey-550 max-w-md mt-6">
             Purus morbi egestas odio egestas ac id leo egestas purus, lorem dui
             dignissim vel condimentum molestie sagittis nulla ipsum sit ac nunc.
           </p>
@@ -180,7 +180,7 @@ const BlogPage = () => {
           classes="py-[72px] px-8"
           title="“If you reinvest in the community, it’s much better for staff, the business and the quality of your product.”"
           text="Malcolm McCullough, Bill’s Farm, Victoria"
-          textClasses="text-sm text-[#0071CE] mt-5"
+          textClasses="text-sm text-blue-1000 mt-5"
         />
       </div>
       <ThematicBlock title="Why is inflation so high?" />

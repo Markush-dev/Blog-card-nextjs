@@ -50,11 +50,11 @@ const Page: FC<IProps> = ({ params: { id } }) => {
       <div className="flex justify-end w-full">
         <div className="max-w-content pt-12 sm:mr-8 px-8 xl:px-0 flex flex-col sm:gap-y-16 gap-y-8 overflow-hidden">
           <div className="flex flex-col text-lg gap-4">
-            <h2 className="text-2xl font-semibold">
+            <h3 className="heading-2xl">
               As a merchant, you need to be constantly measuring your business
               performance so you know what’s working and what isn’t. So, how do
               you measure small business success?
-            </h2>
+            </h3>
             <p>
               Business is unpredictable and ever-evolving. From shopping trends,
               to the amount of expendable income in your customers’ bank
@@ -69,18 +69,16 @@ const Page: FC<IProps> = ({ params: { id } }) => {
             </p>
           </div>
           <div className="flex flex-col gap-6">
-            <h1 className="text-[32px] font-semibold ">
-              Signs your small business is more successful than you think
-            </h1>
-            <h3 className="text-2xl font-semibold">The good news</h3>
-            <h4 className="text-[22px] font-semibold">Tax Deductions</h4>
+            <h1>Signs your small business is more successful than you think</h1>
+            <h3>The good news</h3>
+            <h3 className="heading-xl">Tax Deductions</h3>
             <p>
               You’d be forgiven for thinking profit is the most important
               yardstick for commercial triumph. After all, positive financial
               performance is a good indicator that something is going right.
               However, it’s not the only definition of success.
             </p>
-            <h4 className="text-[22px] font-semibold">Loyalty programs</h4>
+            <h3 className="heading-xl">Loyalty programs</h3>
             <p>
               While the net worth of your business is important, success means
               different things to different business owners. And, although the
@@ -88,24 +86,22 @@ const Page: FC<IProps> = ({ params: { id } }) => {
               not the be-all and end-all for small business owners — especially
               those just getting their business off the ground.
             </p>
-            <h5 className="text-lg font-semibold">In-store</h5>
+            <h4>In-store</h4>
             <p>
               Business is unpredictable and ever-evolving. From shopping trends,
               to the amount of expendable income in your customers’ bank
               accounts, to the way they pay — the only thing you can count on is
               that change is continuous.
             </p>
-            <h5 className="text-lg font-semibold">Online</h5>
+            <h4>Online</h4>
             <p>
               Business is unpredictable and ever-evolving. From shopping trends,
               to the amount of expendable income in your customers’ bank
               accounts, to the way they pay — the only thing you can count on is
               that change is continuous.
             </p>
-            <h3 className="text-2xl font-semibold">The great news</h3>
-            <h4 className="text-[22px] font-semibold">
-              You probably haven’t got all the info you need
-            </h4>
+            <h3 className="heading-2xl">The great news</h3>
+            <h3>You probably haven’t got all the info you need</h3>
             <p>
               While the net worth of your business is important, success means
               different things to different business owners. And, although the
@@ -113,10 +109,10 @@ const Page: FC<IProps> = ({ params: { id } }) => {
               not the be-all and end-all for small business owners — especially
               those just getting their business off the ground.
             </p>
-            <h6 className="font-semibold">
+            <h6 className="heading-md">
               Your small business really is much more successful than you think
             </h6>
-            <p className="font-semibold text-sm">
+            <p className="heading-sm">
               Less impressive but still worth considering
             </p>
             <p>
@@ -132,7 +128,7 @@ const Page: FC<IProps> = ({ params: { id } }) => {
               not the be-all and end-all for small business owners — especially
               those just getting their business off the ground.
             </p>
-            <p className="font-semibold text-sm">Also worth knowing</p>
+            <p className="heading-sm">Also worth knowing</p>
             <div>
               When determining the success of your business, other important
               questions to ask yourself include:
@@ -162,7 +158,7 @@ const Page: FC<IProps> = ({ params: { id } }) => {
               height={543}
               priority={true}
             />
-            <p className="text-sm text-[#6D7274] max-w-md mt-6">
+            <p className="body-sm text-grey-550 max-w-md mt-6">
               Purus morbi egestas odio egestas ac id leo egestas purus, lorem
               dui dignissim vel condimentum molestie sagittis nulla ipsum sit ac
               nunc.
@@ -177,14 +173,14 @@ const Page: FC<IProps> = ({ params: { id } }) => {
               height={543}
               priority={true}
             />
-            <p className="text-sm text-[#6D7274] max-w-md mt-6">
+            <p className="body-sm text-grey-550 max-w-md mt-6">
               Purus morbi egestas odio egestas ac id leo egestas purus, lorem
               dui dignissim vel condimentum molestie sagittis nulla ipsum sit ac
               nunc.
             </p>
           </div>
           <div>
-            <h1 className="text-[32px] font-semibold tracking-tighter">
+            <h1 className="tracking-tighter">
               How to define business success for your small business
             </h1>
             <div className="flex flex-col gap-3 pt-5">
@@ -231,7 +227,7 @@ const Page: FC<IProps> = ({ params: { id } }) => {
             />
           </div>
           <div>
-            <h3 className="text-2xl font-semibold">What about happiness?</h3>
+            <h3>What about happiness?</h3>
             <div className="flex flex-col gap-3 pt-5">
               <p>
                 Finding joy in what you do could be perceived as an
@@ -264,9 +260,7 @@ const Page: FC<IProps> = ({ params: { id } }) => {
             <ImageGridGallery imagePaths={imagesDesktop} />
           </div>
           <div>
-            <h1 className="text-[32px] font-semibold ">
-              Key factors that determine business success
-            </h1>
+            <h1>Key factors that determine business success</h1>
             <p className="mt-5">
               Irrespective of which marker of success you choose to pursue,
               there are four common factors that tend to influence whether or
@@ -274,7 +268,7 @@ const Page: FC<IProps> = ({ params: { id } }) => {
             </p>
           </div>
           <div>
-            <h3 className="text-2xl font-semibold">1. People and culture</h3>
+            <h3>1. People and culture</h3>
             <p className="mt-5">
               Effectively managing your people is critical to success.
             </p>
@@ -286,7 +280,7 @@ const Page: FC<IProps> = ({ params: { id } }) => {
             </p>
           </div>
           <div>
-            <h3 className="text-2xl font-semibold">2. Product development</h3>
+            <h3>2. Product development</h3>
             <div className="flex flex-col gap-4 mt-5">
               <p>
                 Whatever you sell, you need to keep abreast of changing consumer
@@ -305,7 +299,7 @@ const Page: FC<IProps> = ({ params: { id } }) => {
             </div>
           </div>
           <div>
-            <h3 className="text-2xl font-semibold">3. Cash flow</h3>
+            <h3>3. Cash flow</h3>
             <div className="flex flex-col gap-4 mt-5">
               <p>
                 Proper cash flow management is critical to the success of your
@@ -328,11 +322,11 @@ const Page: FC<IProps> = ({ params: { id } }) => {
           </div>
           <CustomTitle
             title="Pull-out Quote (not blockquote) Arcu, egestas facilisis lacus, justo, tellus venenatis volutpat. Suspendisse sapien metus, dignissim gravida rhoncus, eget."
-            color="blue1000"
-            classes="md:text-[40px] text-4xl leading-[48px] tracking-[-0.8px]"
+            color="text-blue-1000"
+            classes="md:heading-4xl tracking-[-0.8px]"
           />
           <div>
-            <h3 className="text-2xl font-semibold">4. Customer loyalty</h3>
+            <h3>4. Customer loyalty</h3>
             <p className="mt-5">
               In any industry, customer loyalty is a key factor of success.
               Happy customers are your best form of marketing. So, make the
@@ -360,7 +354,7 @@ const Page: FC<IProps> = ({ params: { id } }) => {
             </p>
           </div>
           <div>
-            <h1 className="text-[32px] font-semibold ">
+            <h1 className="heading-3xl">
               If you can’t measure it, you can’t improve it
             </h1>
             <div className="flex flex-col gap-4 mt-5">

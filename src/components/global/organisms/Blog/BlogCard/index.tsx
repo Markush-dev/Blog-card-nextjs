@@ -81,8 +81,9 @@ const BlogCard: React.FC<BlogCardProps> = ({ data, configuration }) => {
       changeImagePosition,
       styles.customBlockStyles,
       cardShadow,
+      bgColor,
     );
-  }, [changeImagePosition, cardShadow, styles.customBlockStyles]);
+  }, [changeImagePosition, cardShadow, styles.customBlockStyles, bgColor]);
 
   const contentClassName = useMemo(() => {
     return getContentClass(styles.contentStyles, margin, configWidth);
@@ -94,11 +95,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ data, configuration }) => {
   };
 
   return (
-    <article
-      className={articleClassName}
-      style={{ backgroundColor: bgColor ? `var(--${bgColor})` : "" }}
-      onClick={() => handleRedirectToPost(id)}
-    >
+    <div className={articleClassName} onClick={() => handleRedirectToPost(id)}>
       {!changeImagePosition && (
         <BlogCardImage
           imageUrl={imageUrl}
@@ -129,7 +126,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ data, configuration }) => {
           classes={imageClassName}
         />
       )}
-    </article>
+    </div>
   );
 };
 

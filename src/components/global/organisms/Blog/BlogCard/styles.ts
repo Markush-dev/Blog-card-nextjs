@@ -13,8 +13,8 @@ export const styleObject = {
 };
 
 export const categoryStylesClassName = {
-  whiteCard: "bg-[#F6F7F9] text-[#0071CE]",
-  grayCard: "bg-white text-[#0071CE]",
+  whiteCard: "bg-grey-30 text-blue-1000",
+  grayCard: "bg-white text-blue-1000",
   colorCard: "bg-black text-white",
   blackCard: "bg-white text-black",
 };

@@ -35,7 +35,7 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className="flex flex-col items-center sm:mt-16 mt-8 mb-8 sm:px-20 text-white">
+      <div className="w-full flex flex-col items-center sm:mt-16 mt-8 mb-8 sm:px-20 text-white">
         <BlogCard data={dataSubscribe} configuration={CARD_SUBSCRIBE_CONFIG} />
       </div>
       <div className="flex flex-col bg-gray-50 py-10 sm:px-20">

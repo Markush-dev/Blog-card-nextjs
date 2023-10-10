@@ -15,7 +15,7 @@ const BlogCardContent: FC<IPropsContent> = ({
 }) => {
   return (
     <>
-      <h2 className={`${fontSizeTitle || "text-[22px]"} font-semibold`}>
+      <h2 className={`${fontSizeTitle || "heading-xl"} font-semibold`}>
         {title}
       </h2>
       {splitText ? (

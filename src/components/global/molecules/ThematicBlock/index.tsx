@@ -43,8 +43,8 @@ const ThematicBlock: FC<IProps> = ({
     <div className={`max-w-content px-8 md:p-0 ${classes || ""}`}>
       <CustomTitle
         title={title}
-        color="blue1000"
-        classes={`${titleClasses || "md:mt-12 mt-8 md:text-[32px]"}`}
+        color="text-blue-1000"
+        classes={`${titleClasses || "md:mt-12 mt-8 md:heading-3xl]"}`}
       />
       {element ? <>{element}</> : <>{mockElement}</>}
     </div>

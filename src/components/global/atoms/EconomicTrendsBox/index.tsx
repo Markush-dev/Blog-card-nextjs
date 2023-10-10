@@ -2,17 +2,15 @@ import { FC } from "react";
 
 interface IProps {
   text: string;
-  textColor?: string;
   bgColor?: string;
 }
 
-const EconomicTrendsBox: FC<IProps> = ({ text, textColor, bgColor }) => {
+const EconomicTrendsBox: FC<IProps> = ({ text, bgColor }) => {
   return (
     <div
-      className={`w-[200px] h-[150px] p-4 rounded-2xl flex-center text-[22px] font-semibold ${
+      className={`w-[200px] h-[150px] p-4 text-blue-1000 rounded-2xl flex-center heading-xl ${
         bgColor || "bg-white"
       }`}
-      style={{ color: `var(--${textColor || ""})` }}
     >
       {text}
     </div>

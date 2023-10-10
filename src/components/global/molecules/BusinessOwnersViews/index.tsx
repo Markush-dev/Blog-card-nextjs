@@ -24,7 +24,7 @@ const BusinessOwnersViews = () => {
         />
       </div>
       <div className="md:min-w-content">
-        <p className="text-sm text-[#6D7274] mt-6">
+        <p className="text-sm text-grey-550 mt-6">
           Matt Bisaro, co-owner of Floral Craftsman, NSW
         </p>
       </div>
